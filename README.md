@@ -3,6 +3,11 @@
 
 MCBBS的官方博文录目前的收录更新到2018年6月3日《每周方块：音符盒》及其之前的帖子，这些帖子暂时不再同步到这里，请到论坛帖子中搜索。（但是也可能出现老文章后翻译的情况）
 
+如果API坏了，请联系https://github.com/SPGoding
+
+## 实用链接
+在线博文转换器：https://spgoding.com
+
 MCBBS官方博文录：https://www.mcbbs.net/thread-675773-1-1.html
 
-如果API坏了，请联系https://github.com/SPGoding
+
