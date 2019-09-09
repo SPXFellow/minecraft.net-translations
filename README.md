@@ -9,6 +9,8 @@ MCBBS的官方博文录目前的收录更新到2018年6月3日《每周方块：
 
 ## 使用方法
 
+### 更新数据
+
 在目录下执行：
 
 ```bash
@@ -20,6 +22,10 @@ python mcContents.py [gb18030|utf-8]
 填写sync时，将两个表中的内容同步为参数中指定编码表的内容。
 
 如，`python mcContents.py utf-8`将gb表同步为utf8表的内容。
+
+### 添加内容
+
+gb表支持使用excel编辑，utf8表支持使用主流文本编辑器（vscode, notepad++）编辑。
 
 ## 实用链接
 在线博文转换器：https://spgoding.com
