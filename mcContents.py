@@ -8,7 +8,7 @@ def update(cate: str):
     apiurl = 'https://www.minecraft.net/content/minecraft-net/_jcr_content.articles.grid?tagsPath=minecraft:article/' + cate + '&lang=/content/minecraft-net/language-masters/zh-hans&pageSize=100'
 
     # 获取之前的记录
-    prev_data = pd.read_csv(cate+".csv", encoding='utf-8')
+    prev_data = pd.read_csv(cate+"_gb.csv", encoding='gb18030')
     last_title = prev_data.loc[0]["Article Title"]
 
     # 获取新的数据，建立空表
@@ -30,6 +30,7 @@ def update(cate: str):
 
     # 合并新旧表，保存
     pd.concat([new_article_data,prev_data]).to_csv(path_or_buf=cate+".csv", index=False, encoding='utf-8')
+    pd.concat([new_article_data,prev_data]).to_csv(path_or_buf=cate+"_gb.csv", index=False, encoding='gb18030')
     print("Saving", cate + ".")
 
 # 更新csv
