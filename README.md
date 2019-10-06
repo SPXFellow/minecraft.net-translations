@@ -1,6 +1,6 @@
 # MINECRAFT.NET-TRANSLATIONS
 
-寄存在 GitHub 上的官网博文翻译参考目录
+寄存在 GitHub 上的官网博文翻译参考目录。
 
 ## 文件
 
@@ -10,13 +10,21 @@
 
 ## 查看与编辑
 
-你可以直接在 GitHub 仓库中浏览 [`culture.csv`](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/culture.csv) 与 [`insider.csv`](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/insider.csv)。
+你可以直接在 GitHub 仓库中浏览 [`culture.csv`](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/culture.csv) 与 [`insider.csv`](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/insider.csv)。如果无法完全显示表格，请拖动横向滚动条。
 
 如果你还想要编辑文件，推荐使用 VSCode 的 [janisdd.vscode-edit-csv](http://marketplace.visualstudio.com/items?itemName=janisdd.vscode-edit-csv) 插件。除非你知道自己在做什么，**不要**使用 Excel 等软件。
 
 ## 说明
 
-[MCBBS的官方博文录](https://www.mcbbs.net/thread-675773-1-1.html)目前的收录更新到 2018 年 6 月 3 日《每周方块：音符盒》及其之前的帖子，这些帖子暂时不再同步到这里，请到论坛帖子中搜索。（但是也可能出现老文章后翻译的情况）
+[MCBBS的官方博文录](https://www.mcbbs.net/thread-675773-1-1.html)目前的收录更新到 2018 年 6 月 3 日《每周方块：音符盒》及其之前的帖子。社区文化类的帖子暂时还未同步到本目录，请到帖子内寻找。
+
+本目录不收录MERCH（周边产品）和NEWS（新闻资讯）分类（除非官网分错类别），周边产品请到MCBBS博文录寻找，新闻资讯请到MCBBS新闻资讯版寻找。
+
+本目录一般不对翻译文章进行严格审核，可能会留存带有机翻痕迹的文章。如果收录的文章在MCBBS被锁定且出现新的翻译，则会将其从目录中替换。
+
+本目录的收录不是文章获得MCBBS翻译Wiki版绿宝石奖励的凭据。
+
+部分不属于文章的视频链接类官网内容（点击后跳转到Youtube）可能不会被包含在本目录中。
 
 ## 实用链接
 
