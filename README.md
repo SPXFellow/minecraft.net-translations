@@ -8,8 +8,6 @@
 
 * TODO
 
-如果无法完全显示表格，请拖动横向滚动条。
-
 
 
 ## 文件
@@ -19,7 +17,7 @@
 
 * `config.json`：指示博文分类的对应名称。
 * `uid.json`：存放uid与昵称的对应关系，每月更新一次。
-* 其它`.csv`文件：对应分类博文的目录。
+* 其它`.md`文件：对应分类博文的目录。
 
 ## 使用与编辑
 
@@ -27,7 +25,7 @@
 
 * `pull`：将`rawtable.csv`更新到最新状态。
 * `render`：根据分类输出不同的`.csv`文件。
-* `bbcode`：按分类切分并输出bbcode表格，bbcode存放在`bbcode.txt`中。
+* <s>`bbcode`：按分类切分并输出bbcode表格，bbcode存放在`bbcode.txt`中。</s> 该功能暂未实现。
 
 示例：
 
