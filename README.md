@@ -6,7 +6,12 @@
 
 目前，你可以直接在 GitHub 仓库中浏览以下分类的表格：
 
-* TODO
+* [内部资讯 INSIDER](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E5%86%85%E9%83%A8%E8%B5%84%E8%AE%AF.md)
+* [社区文化 CULTURE](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E7%A4%BE%E5%8C%BA%E6%96%87%E5%8C%96.md)
+* [每周方块 INSIDER: Block of the Week](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E6%AF%8F%E5%91%A8%E6%96%B9%E5%9D%97.md)
+* [遇见生物 INSIDER: Meet the Mob](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E9%81%87%E8%A7%81%E7%94%9F%E7%89%A9.md)
+* [背包盘点 INSIDER: Taking Inventory](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E8%83%8C%E5%8C%85%E7%9B%98%E7%82%B9.md)
+* [与之建造 CULTURE: Build With It](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E4%B8%8E%E4%B9%8B%E5%BB%BA%E9%80%A0.md)
 
 
 
