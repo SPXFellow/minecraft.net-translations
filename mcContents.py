@@ -102,7 +102,7 @@ def render():
     for i, rec in data.iterrows():
         thiscat = rec["cat"]
         tr_name = nameGet(rec["tr_uid"])
-        emeralded = True if rec["emeralded"] == "1" else False
+        emeralded = True if int(rec["emeralded"]) == 1 else False
         tables[thiscat].loc[len(tables[thiscat])]= list(data.iloc[i][:-3])+[tr_name, emeralded] # rawtable[:-3]的记录顺序和输出表一致
     
     for cat in cats:
