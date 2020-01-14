@@ -33,23 +33,7 @@ def pull():
     print("Successfully pulled.")
 
 def render():
-    with open("config.json") as f:
-        cats = json.loads(f.read())
-    with open("uid.json") as f:
-        uid = json.loads(f.read())
-
-    tables = {}
-    for cat in cats:
-        tables[cat] = pd.DataFrame(columns=["发布日期","原文标题","原文链接","译文标题","译文链接","译者","认证"])
-    data = pd.read_csv("rawtable.csv", encoding='utf-8')
-    
-    for i in range(len(data)):
-        thiscat = data.iloc[i]["cat"]
-        rec = data.iloc[i][:-1]
-        rec[""]
-        tables[thiscat].loc[len(tables[thiscat])] = data.iloc[i][:-1]
-    
-    for t in tables:
+    pass
 
 
 
