@@ -15,6 +15,8 @@
 
 
 
+表格中的图片素材版权归 Mojang 所有。
+
 ## 文件
 
 - `rawtable.csv`：存放所有 culture 与 insider 分类的博文及翻译。
