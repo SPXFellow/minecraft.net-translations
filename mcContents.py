@@ -27,13 +27,31 @@ def pull():
         link = 'https://www.minecraft.net' + art["article_url"]
         pub = str(pub.year) + "/" + str(pub.month) + "/" + str(pub.day)
         cat = art["primary_category"].lower()
-        new_article_data.loc[len(new_article_data)]=[pub,title,link,'-','-','-',cat] # tr title, tr link, tr uid
+        new_article_data.loc[len(new_article_data)]=[pub,title,link,'-','-','-','0',cat] # tr title, tr link, tr uid
     
     pd.concat([new_article_data,prev_data]).to_csv(path_or_buf="rawtable.csv", index=False, encoding='utf-8')
     print("Successfully pulled.")
 
 def render():
-    print("Not support now")
+    with open("config.json") as f:
+        cats = json.loads(f.read())
+    with open("uid.json") as f:
+        uid = json.loads(f.read())
+
+    tables = {}
+    for cat in cats:
+        tables[cat] = pd.DataFrame(columns=["发布日期","原文标题","原文链接","译文标题","译文链接","译者","认证"])
+    data = pd.read_csv("rawtable.csv", encoding='utf-8')
+    
+    for i in range(len(data)):
+        thiscat = data.iloc[i]["cat"]
+        rec = data.iloc[i][:-1]
+        rec[""]
+        tables[thiscat].loc[len(tables[thiscat])] = data.iloc[i][:-1]
+    
+    for t in tables:
+
+
 
 def bbcode():
     print("Not support now")
