@@ -1,7 +1,7 @@
 published,title,link,tr_title,tr_link,tr_uid,emeralded,cat
-2020/2/28,Fabulous fountains,https://www.minecraft.net/zh-hans/article/fabulous-fountains,神化喷泉,https://www.mcbbs.net/thread-972174-1-1.html,1405557,0,culture
-2020/2/27,Creating History in Minecraft,https://www.minecraft.net/zh-hans/article/creating-history-minecraft,在我的世界中创造历史,https://www.mcbbs.net/thread-971492-1-1.html,1405557,0,culture
-2020/2/26,Taking Inventory: Saddle,https://www.minecraft.net/zh-hans/article/taking-inventory--saddle,背包盘点：鞍,https://www.mcbbs.net/thread-970054-1-1.html,10240,0,insider:ti
+2020/2/28,Fabulous fountains,https://www.minecraft.net/zh-hans/article/fabulous-fountains,神化喷泉,https://www.mcbbs.net/thread-972174-1-1.html,1405557,1,culture
+2020/2/27,Creating History in Minecraft,https://www.minecraft.net/zh-hans/article/creating-history-minecraft,在我的世界中创造历史,https://www.mcbbs.net/thread-971492-1-1.html,1405557,1,culture
+2020/2/26,Taking Inventory: Saddle,https://www.minecraft.net/zh-hans/article/taking-inventory--saddle,背包盘点：鞍,https://www.mcbbs.net/thread-970054-1-1.html,10240,1,insider:ti
 2020/2/21,Dungeons Diaries: Environments,https://www.minecraft.net/zh-hans/article/dungeons-diaries--environments,《Minecraft 地下城》开发日志：环境,https://www.mcbbs.net/thread-965867-1-1.html,1573041,0,insider
 2020/2/20,Taking Inventory: Helmet,https://www.minecraft.net/zh-hans/article/taking-inventory--helmet,背包盘点：头盔,https://www.mcbbs.net/thread-964975-1-1.html,1196990,0,insider:ti
 2020/2/19,Useless Machines,https://www.minecraft.net/zh-hans/article/useless-machines,无用机器,https://www.mcbbs.net/thread-964541-1-1.html,10240,0,insider
@@ -16,7 +16,7 @@ published,title,link,tr_title,tr_link,tr_uid,emeralded,cat
 2020/1/28,Moody Mods,https://www.minecraft.net/zh-hans/article/moody-mods,暴躁生物,https://www.mcbbs.net/thread-948252-1-1.html,1405557,1,culture
 2020/1/27,Crafty Comforts,https://www.minecraft.net/zh-hans/article/crafty-comforts,舒适的家具,https://www.mcbbs.net/thread-948240-1-1.html,1405557,1,culture
 2020/1/24,"New Year, New Builds, New Writer!",https://www.minecraft.net/zh-hans/article/new-year--new-builds--new-writer-,新年纪，新建筑，新编辑！,https://www.mcbbs.net/thread-946756-1-1.html,1405557,1,insider
-2020/1/24,Dungeons Diaries: Sound,https://www.minecraft.net/zh-hans/article/dungeons-diaries--sounds,《Minecraft 地下城》开发日志：音效,https://www.mcbbs.net/thread-973086-1-1.html,10240,0,insider
+2020/1/24,Dungeons Diaries: Sound,https://www.minecraft.net/zh-hans/article/dungeons-diaries--sounds,《Minecraft 地下城》开发日志：音效,https://www.mcbbs.net/thread-973086-1-1.html,10240,1,insider
 2020/1/24,Build With It: Gold!,https://www.minecraft.net/zh-hans/article/build-with-it--gold-,与之搭建:金！,https://www.mcbbs.net/thread-946727-1-1.html,1405557,1,culture:bwi
 2020/1/24,Taking Inventory: Melon Slice,https://www.minecraft.net/zh-hans/article/taking-inventory--melon-slice,背包盘点：西瓜片,https://www.mcbbs.net/thread-945781-1-1.html,1573041,0,insider:ti
 2020/1/23,Reach for the Stars,https://www.minecraft.net/zh-hans/article/reach-stars,手可摘星辰,https://www.mcbbs.net/thread-946738-1-1.html,1405557,1,culture
@@ -38,7 +38,7 @@ published,title,link,tr_title,tr_link,tr_uid,emeralded,cat
 2019/12/23,Happy Holidays,https://www.minecraft.net/zh-hans/article/happy-holidays0,节日快乐,https://www.mcbbs.net/thread-935022-1-1.html,1196990,1,insider
 2019/12/22,Taking Inventory: Bone,https://www.minecraft.net/zh-hans/article/taking-inventory--bone,背包盘点：骨头,https://www.mcbbs.net/thread-934169-1-1.html,2444378,1,insider:ti
 2019/12/21,Treemendous Decorations,https://www.minecraft.net/zh-hans/article/treemendous-decorations,树大的装饰,https://www.mcbbs.net/thread-934661-1-1.html,1196990,1,culture
-2019/12/20,Dungeons Diaries: Gameplay,https://www.minecraft.net/zh-hans/article/dungeons-diaries--gameplay,《Minecraft 地下城》开发日志：游戏玩法,https://www.mcbbs.net/thread-973131-1-1.html,10240,0,insider
+2019/12/20,Dungeons Diaries: Gameplay,https://www.minecraft.net/zh-hans/article/dungeons-diaries--gameplay,《Minecraft 地下城》开发日志：游戏玩法,https://www.mcbbs.net/thread-973131-1-1.html,10240,1,insider
 2019/12/20,Build With It: Acacia!,https://www.minecraft.net/zh-hans/article/build-with-it--acacia-,与之搭建：金合欢！,https://www.mcbbs.net/thread-937680-1-1.html,484281,0,culture:bwi
 2019/12/19,Around the World in 80 Builds,https://www.minecraft.net/zh-hans/article/around-world-80-builds,参观世界各地的80座建筑,https://www.mcbbs.net/thread-934003-1-1.html,579717,1,culture
 2019/12/20,GORGEOUS GARDENS AND HONEY RAINBOWS,https://www.minecraft.net/zh-hans/article/gorgeous-gardens-and-honey-rainbows,-,-,-,0,culture
@@ -193,23 +193,23 @@ published,title,link,tr_title,tr_link,tr_uid,emeralded,cat
 2018/11/23,Taking Inventory: Apple,https://minecraft.net/zh-hans/article/taking-inventory-apple,背包盘点：苹果,https://www.mcbbs.net/thread-831423-1-1.html,1480882,1,insider:ti
 2018/11/17,The Sky is No Limit,https://minecraft.net/zh-hans/article/sky-no-limit,天空没有极限,https://www.mcbbs.net/thread-935779-1-1.html,1073223,1,culture
 2018/11/16,Taking Inventory: Shovel,https://minecraft.net/zh-hans/article/taking-inventory-shovel,背包盘点：铲子,https://www.mcbbs.net/thread-830416-1-1.html,1480882,1,insider:ti
-2018/11/10,Attack of Titans,https://minecraft.net/zh-hans/article/attack-titans,泰坦的进攻,https://www.mcbbs.net/thread-830027-1-1.html,1142520,0,culture
+2018/11/10,Attack of Titans,https://minecraft.net/zh-hans/article/attack-titans,巨人入侵,https://www.mcbbs.net/thread-970658-1-1.html,1405557,1,culture
 2018/11/9,Taking Inventory: Tripwire Hook,https://minecraft.net/zh-hans/article/taking-inventory-tripwire-hook,背包盘点：绊线钩,https://www.mcbbs.net/thread-829390-1-1.html,1142520,1,insider:ti
-2018/11/6,Player Piano,https://minecraft.net/zh-hans/article/player-piano,-,-,-,0,culture
+2018/11/6,Player Piano,https://minecraft.net/zh-hans/article/player-piano,建成钢琴,https://www.mcbbs.net/thread-970650-1-1.html,1405557,1,culture
 2018/11/2,Taking Inventory: Sunflower,https://minecraft.net/zh-hans/article/taking-inventory-sunflower,背包盘点：向日葵,https://www.mcbbs.net/thread-827318-1-1.html,10240,1,insider:ti
 2018/11/1,Our Marketplace Picks: October 2018,https://minecraft.net/zh-hans/article/our-marketplace-picks-october-2018,-,-,-,0,insider
-2018/10/31,Spooktacular Squash,https://minecraft.net/zh-hans/article/spooktacular-squash,诡秘南瓜,https://www.mcbbs.net/thread-971230-1-1.html,1405557,0,culture
+2018/10/31,Spooktacular Squash,https://minecraft.net/zh-hans/article/spooktacular-squash,诡秘南瓜,https://www.mcbbs.net/thread-971230-1-1.html,1405557,1,culture
 2018/10/27,Java Devs talk Village and Pillage!,https://minecraft.net/zh-hans/article/java-developers-talk-village-and-pillage,Java版开发者畅聊村庄与掠夺更新！,https://www.mcbbs.net/thread-826392-1-1.html,10240,0,insider
 2018/10/26,Taking Inventory: Turtle Shell,https://minecraft.net/zh-hans/article/taking-inventory-turtle-shell,背包盘点：海龟壳,https://www.mcbbs.net/thread-826014-1-1.html,1142520,0,insider:ti
-2018/10/22,A la Kart,https://minecraft.net/zh-hans/article/la-kart,A LA KART,https://www.mcbbs.net/thread-971238-1-1.html,1405557,0,culture
-2018/10/20,Smalltown Boy,https://minecraft.net/zh-hans/article/smalltown-boy,小镇男孩,https://www.mcbbs.net/thread-825039-1-1.html,10240,0,culture
+2018/10/22,A la Kart,https://minecraft.net/zh-hans/article/la-kart,A LA KART,https://www.mcbbs.net/thread-971238-1-1.html,1405557,1,culture
+2018/10/20,Smalltown Boy,https://minecraft.net/zh-hans/article/smalltown-boy,小镇男孩,https://www.mcbbs.net/thread-971632-1-1.html,1405557,1,culture
 2018/10/19,Taking Inventory: Trapdoor,https://minecraft.net/zh-hans/article/taking-inventory-trapdoor,背包盘点：活板门,https://www.mcbbs.net/thread-824576-1-1.html,2444378,0,insider:ti
-2018/10/18,Coalchella: A Minecraft Music Festival,https://minecraft.net/zh-hans/article/coalchella-minecraft-music-festival,煤切拉：《我的世界》线上音乐节,https://www.mcbbs.net/thread-971837-1-1.html,1405557,0,culture
+2018/10/18,Coalchella: A Minecraft Music Festival,https://minecraft.net/zh-hans/article/coalchella-minecraft-music-festival,煤切拉：《我的世界》线上音乐节,https://www.mcbbs.net/thread-971837-1-1.html,1405557,1,culture
 2018/10/12,Taking Inventory: Torch,https://minecraft.net/zh-hans/article/taking-inventory-torch,盘点背包：火把,https://www.mcbbs.net/thread-823615-1-1.html,10240,1,insider:ti
-2018/10/9,Blockbeard,https://minecraft.net/zh-hans/article/blockbeard,大胡子方块,https://www.mcbbs.net/thread-823404-1-1.html,1928226,0,culture
+2018/10/9,Blockbeard,https://minecraft.net/zh-hans/article/blockbeard,大块头,https://www.mcbbs.net/thread-972485-1-1.html,1405557,1,culture
 2018/10/5,Taking Inventory: Pickaxe,https://minecraft.net/zh-hans/article/taking-inventory-pickaxe,背包清点：镐,https://www.mcbbs.net/thread-822891-1-1.html,1073223,1,insider:ti
-2018/10/4,Terrific Temple,https://minecraft.net/zh-hans/article/terrific-temple,绝赞寺庙,https://www.mcbbs.net/thread-972487-1-1.html,1405557,0,culture
-2018/9/22,Fantastic Flying Machine,https://minecraft.net/zh-hans/article/fantastic-flying-machine,令人拍案叫绝的飞行蒸汽机,https://www.mcbbs.net/thread-822342-1-1.html,2054643,0,culture
+2018/10/4,Terrific Temple,https://minecraft.net/zh-hans/article/terrific-temple,绝赞寺庙,https://www.mcbbs.net/thread-972487-1-1.html,1405557,1,culture
+2018/9/22,Fantastic Flying Machine,https://minecraft.net/zh-hans/article/fantastic-flying-machine,神奇的飞行器,https://www.mcbbs.net/thread-973402-1-1.html,1405557,1,culture
 2018/9/21,A Most Sinister Structure,https://minecraft.net/zh-hans/article/most-sinister-structure-0,-,-,-,0,culture
 2018/9/18,Vessel in a Vase,https://minecraft.net/zh-hans/article/vessel-vase,瓮中之舟,https://www.mcbbs.net/thread-824963-1-1.html,660537,1,culture
 2018/9/15,Minecraft on Instagram!,https://minecraft.net/zh-hans/article/minecraft-instagram,-,-,-,0,insider
@@ -222,7 +222,7 @@ published,title,link,tr_title,tr_link,tr_uid,emeralded,cat
 2018/8/21,Creepy Castle,https://minecraft.net/zh-hans/article/creepy-castle,-,-,-,0,culture
 2018/8/17,Forgotten Depths,https://minecraft.net/zh-hans/article/forgotten-depths,-,-,-,0,culture
 2018/8/16,Intricate Islands,https://minecraft.net/zh-hans/article/intricate-islands,错综复杂的岛屿,https://www.mcbbs.net/thread-817549-1-1.html,2054643,0,culture
-2018/8/14,Medieval Marvel,https://minecraft.net/zh-hans/article/medieval-marvel,-,-,-,0,culture
+2018/8/14,Medieval Marvel,https://minecraft.net/zh-hans/article/medieval-marvel,中世纪奇观,https://www.mcbbs.net/thread-973501-1-1.html,710691,1,culture
 2018/8/11,Building Knowledge,https://minecraft.net/zh-hans/article/building-knowledge,建筑知识,https://www.mcbbs.net/thread-817440-1-1.html,2054643,0,culture
 2018/8/11,Autumn Colours,https://minecraft.net/zh-hans/article/autumn-colours,-,-,-,0,culture
 2018/8/8,We're Not Worthy,https://minecraft.net/zh-hans/article/were-not-worthy,-,-,-,0,culture
@@ -250,7 +250,7 @@ published,title,link,tr_title,tr_link,tr_uid,emeralded,cat
 2018/6/23,Steaming Ahead,https://minecraft.net/zh-hans/article/steaming-ahead,-,-,-,0,culture
 2018/6/18,Ocean Cruising,https://minecraft.net/zh-hans/article/ocean-cruising,-,-,-,0,culture
 2018/6/17,To the Theme Park!,https://minecraft.net/zh-hans/article/theme-park,-,-,-,0,culture
-2018/6/15,High Rise Society,https://minecraft.net/zh-hans/article/high-rise-society,-,-,-,0,culture
+2018/6/15,High Rise Society,https://minecraft.net/zh-hans/article/high-rise-society,高层社会,https://www.mcbbs.net/thread-973406-1-1.html,1405557,1,culture
 2018/6/13,A Peaceful Place,https://minecraft.net/zh-hans/article/peaceful-place,-,-,-,0,culture
 2018/6/13,Free Aquatic Quest map!,https://minecraft.net/zh-hans/article/find-free-aquatic-quest-map,-,-,-,0,culture
 2018/6/10,Hologram Housing,https://minecraft.net/zh-hans/article/hologram-housing,-,-,-,0,culture
@@ -344,7 +344,7 @@ published,title,link,tr_title,tr_link,tr_uid,emeralded,cat
 2018/1/17,Rotten Riches,https://minecraft.net/zh-hans/article/rotten-riches,-,-,-,0,culture
 2018/1/13,Snowball fights and other delights!,https://minecraft.net/zh-hans/article/snowball-fights-and-other-delights,雪球大战和其他令人愉快之事！,http://www.mcbbs.net/thread-790851-1-1.html,831959,0,culture
 2018/1/12,Block of the Week: Gold Ore,https://minecraft.net/zh-hans/article/block-week-gold-ore,本周方块：金矿石,http://www.mcbbs.net/thread-774970-1-1.html,1073223,1,insider:botw
-2018/1/12,The Dark Mirror,https://minecraft.net/zh-hans/article/dark-mirror,暗面之镜,https://www.mcbbs.net/thread-970257-1-1.html,710691,0,culture
+2018/1/12,The Dark Mirror,https://minecraft.net/zh-hans/article/dark-mirror,暗面之镜,https://www.mcbbs.net/thread-970257-1-1.html,710691,1,culture
 2018/1/11,The Golden Retreat,https://minecraft.net/zh-hans/article/golden-retreat,-,-,-,0,culture
 2018/1/10,Gardens of the Eternal Fountain,https://minecraft.net/zh-hans/article/gardens-eternal-fountain,-,-,-,0,culture
 2018/1/9,Setting Sail,https://minecraft.net/zh-hans/article/setting-sail,-,-,-,0,culture
