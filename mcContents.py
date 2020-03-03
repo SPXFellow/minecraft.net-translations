@@ -31,7 +31,11 @@ def pull():
         new_article_data.loc[len(new_article_data)]=[pub,title,link,'-','-','-','0',cat] # tr title, tr link, tr uid
     
     pd.concat([new_article_data,prev_data]).to_csv(path_or_buf="rawtable.csv", index=False, encoding='utf-8')
-    print("Successfully pulled.")
+    if len(new_article_data) != 0:
+        print("Successfully pulled.")
+    else:
+        print("Already up-to-date.")
+    pass
 
 def render():
     catPath = "config.json"
