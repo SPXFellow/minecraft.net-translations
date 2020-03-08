@@ -15,7 +15,9 @@
 
 
 
-表格中的图片素材版权归 Mojang 所有。
+其中，认证一栏的屏障代表尚未被收录或未达到收录标准，绿宝石代表已经被收录。图片素材版权归 Mojang 所有。
+
+
 
 ## 文件
 
@@ -25,6 +27,8 @@
 * `config.json`：指示博文分类的对应名称。
 * `uid.json`：存放uid与昵称的对应关系，每月更新一次。
 * 其它`.md`文件：对应分类博文的目录。
+
+
 
 ## 使用与编辑
 
@@ -48,6 +52,8 @@ python mcContent.py pull render
 
 除非你知道自己在做什么，**不要**使用 Excel 等软件，这将导致包括乱码在内的问题。
 
+
+
 ## 说明
 
 [MCBBS 的官方博文录](https://www.mcbbs.net/thread-675773-1-1.html) 于近期调整了收录标准，剔除了很多不合格的博文。本目录主要是为了方便对历史已存在译文、最新博文译文的查询参考，
@@ -70,10 +76,13 @@ python mcContent.py pull render
 
 如果收录的文章因机翻要素等原因在 MCBBS 被锁定，同时出现了新的翻译时，则会将其从目录中替换。
 
+在添加译文信息时，请在`tr_title`, `tr_link`, `tr_uid`字段添加译文标题，译文链接，译者UID。如果译文被收录，请将`emeralded`字段改为`1`.
+
 
 
 ## 实用链接
 
-- 在线博文转换器：https://spgoding.com
+- 在线博文转换器 SPX：https://spgoding.com
+- 在线博文转换器 BCC：https://bcc.wd-ljt.com
 - MCBBS官方博文录：https://www.mcbbs.net/thread-675773-1-1.html  
 ![](https://attachment.mcbbs.net/forum/201909/14/001453yfroxnbheoot0nfm.png)
