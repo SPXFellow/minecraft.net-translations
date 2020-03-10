@@ -1,6 +1,6 @@
 published,title,link,tr_title,tr_link,tr_uid,emeralded,cat
 2020/3/6,Taking Inventory: Bell,https://www.minecraft.net/zh-hans/article/taking-inventory--bell,背包盘点：钟,https://www.mcbbs.net/thread-978929-1-1.html,10240,0,insider:ti
-2020/3/6,Build with It: Stained Glass!,https://www.minecraft.net/zh-hans/article/build-it--stained-glass-,与之搭建：染色玻璃！,https://www.mcbbs.net/thread-979007-1-1.html,2419486,0,culture
+2020/3/6,Build with It: Stained Glass!,https://www.minecraft.net/zh-hans/article/build-it--stained-glass-,与之搭建：染色玻璃！,https://www.mcbbs.net/thread-979007-1-1.html,2419486,0,culture:bwi
 2020/3/6,A Forest Getaway,https://www.minecraft.net/zh-hans/article/a-forest-getaway,森林度假区,https://www.mcbbs.net/thread-977976-1-1.html,2444361,0,culture
 2020/2/28,Fabulous fountains,https://www.minecraft.net/zh-hans/article/fabulous-fountains,神化喷泉,https://www.mcbbs.net/thread-972174-1-1.html,1405557,1,culture
 2020/2/27,Creating History in Minecraft,https://www.minecraft.net/zh-hans/article/creating-history-minecraft,在我的世界中创造历史,https://www.mcbbs.net/thread-971492-1-1.html,1405557,1,culture
@@ -152,7 +152,7 @@ published,title,link,tr_title,tr_link,tr_uid,emeralded,cat
 2019/4/2,Meet the Wandering Trader,https://www.minecraft.net/zh-hans/article/meet-wandering-trader,认识流浪的商人,https://www.mcbbs.net/thread-899177-1-1.html,645182,1,insider:meet
 2019/3/22,Taking Inventory: Water Bottle,https://www.minecraft.net/zh-hans/article/taking-inventory--water-bottle,背包盘点：水瓶,https://www.mcbbs.net/thread-898896-1-1.html,1633009,0,insider:ti
 2019/3/21,Dragon Spawn,https://www.minecraft.net/zh-hans/article/dragon-spawn,龙诞,https://www.mcbbs.net/thread-854099-1-1.html,1196990,1,culture
-2019/3/15,Taking Inventory: Name Tag,https://www.minecraft.net/zh-hans/article/taking-inventory--name-tag,背包盘点：命名牌,https://www.mcbbs.net/thread-850945-1-1.html,10240,0,insider:ti
+2019/3/15,Taking Inventory: Name Tag,https://www.minecraft.net/zh-hans/article/taking-inventory--name-tag,背包盘点：命名牌,https://www.mcbbs.net/thread-850945-1-1.html,10240,1,insider:ti
 2019/3/15,Fantastic Furniture,https://www.minecraft.net/zh-hans/article/fantastic-furniture,奇妙家具,https://www.mcbbs.net/thread-980341-1-1.html,2790070,0,culture
 2019/3/11,Meet a Minecrafter: Cory Scheviak,https://www.minecraft.net/zh-hans/article/meet-minecrafter--cory-scheviak,与Minecrafter面对面：CORY SCHEVIAK,https://www.mcbbs.net/thread-850521-1-1.html,10240,1,insider
 2019/4/4,Drink Up?,https://www.minecraft.net/zh-hans/article/drink-up-,畅饮一杯？,https://www.mcbbs.net/thread-852184-1-1.html,10240,0,insider
@@ -160,7 +160,7 @@ published,title,link,tr_title,tr_link,tr_uid,emeralded,cat
 2019/3/7,"Sun, Sea and Sandstone",https://www.minecraft.net/zh-hans/article/sun--sea-and-sandstone,阳光，大海和砂岩,https://www.mcbbs.net/thread-889652-1-1.html,10240,1,culture
 2019/3/14,Virtual Unreality,https://www.minecraft.net/zh-hans/article/virtual-insanity,疯狂幻境,https://www.mcbbs.net/thread-853834-1-1.html,1196990,0,culture
 2019/3/4,Taking Inventory: Feather,https://www.minecraft.net/zh-hans/article/taking-inventory--feather,背包盘点：羽毛,https://www.mcbbs.net/thread-848247-1-1.html,10240,1,insider:ti
-2019/2/21,Taking Inventory: Diamond,https://www.minecraft.net/zh-hans/article/taking-inventory--diamond,背包盘点：钻石,https://www.mcbbs.net/thread-847084-1-1.html,10240,0,insider:ti
+2019/2/21,Taking Inventory: Diamond,https://www.minecraft.net/zh-hans/article/taking-inventory--diamond,背包盘点：钻石,https://www.mcbbs.net/thread-847084-1-1.html,10240,1,insider:ti
 2019/2/20,Streets Ahead,https://www.minecraft.net/zh-hans/article/streets-ahead,道路向前延伸,https://www.mcbbs.net/thread-979457-1-1.html,2790070,0,culture
 2019/2/20,Terrific Tools,https://www.minecraft.net/zh-hans/article/terrific-tools,绝妙的工具,https://www.mcbbs.net/thread-847463-1-1.html,10240,1,culture
 2019/2/19,Taking Inventory: Leggings,https://www.minecraft.net/zh-hans/article/taking-inventory-leggings,背包盘点：护腿,https://www.mcbbs.net/thread-845908-1-1.html,10240,1,insider:ti
@@ -322,7 +322,7 @@ published,title,link,tr_title,tr_link,tr_uid,emeralded,cat
 2018/2/20,Page Turner,https://minecraft.net/zh-hans/article/page-turner,翻书的人,https://www.mcbbs.net/thread-818138-1-1.html,463057,0,culture
 2018/2/17,Java Devs Talk Update Aquatic,https://minecraft.net/zh-hans/article/java-devs-talk-update-aquatic,Java版开发者们畅聊水域更新,http://www.mcbbs.net/thread-782556-1-1.html,10240,0,insider
 2018/2/17,Speedrunning Minecraft!,https://minecraft.net/zh-hans/article/speedrunning-minecraft,-,-,-,0,culture
-2018/2/15,Block of the Week: Bedrock,https://minecraft.net/zh-hans/article/block-week-bedrock,本周方块：基岩,http://www.mcbbs.net/thread-782190-1-1.html,10240,0,insider:botw
+2018/2/15,Block of the Week: Bedrock,https://minecraft.net/zh-hans/article/block-week-bedrock,本周方块：基岩,http://www.mcbbs.net/thread-782190-1-1.html,10240,1,insider:botw
 2018/2/13,Fit for a King,https://minecraft.net/zh-hans/article/fit-king-0,-,-,-,0,culture
 2018/2/13,Snake Temple,https://minecraft.net/zh-hans/article/snake-temple,-,-,-,0,culture
 2018/2/11,ZigZag Resource Pack,https://minecraft.net/zh-hans/article/zigzag-resource-pack,-,-,-,0,culture
@@ -341,7 +341,7 @@ published,title,link,tr_title,tr_link,tr_uid,emeralded,cat
 2018/1/26,Survive and Thrive,https://minecraft.net/zh-hans/article/survive-and-thrive,Survive and Thrive,http://www.mcbbs.net/thread-777971-1-1.html,549541,0,culture
 2018/1/25,Always Building: Download the final map!,https://minecraft.net/zh-hans/article/always-building-download-final-map,Always Building: 下载最终版地图！,http://www.mcbbs.net/thread-776997-1-1.html,10240,1,culture
 2018/1/20,Melody Maker,https://minecraft.net/zh-hans/article/melody-maker,-,-,-,0,culture
-2018/1/19,Block of the Week: Glazed Terracotta,https://minecraft.net/zh-hans/article/block-week-glazed-terracotta,本周方块：带釉陶瓦,http://www.mcbbs.net/thread-775821-1-1.html,10240,0,insider:botw
+2018/1/19,Block of the Week: Glazed Terracotta,https://minecraft.net/zh-hans/article/block-week-glazed-terracotta,本周方块：带釉陶瓦,http://www.mcbbs.net/thread-775821-1-1.html,10240,1,insider:botw
 2018/1/18,Complexcity,https://minecraft.net/zh-hans/article/complexcity,繁华之都,https://www.mcbbs.net/thread-979883-1-1.html,710691,0,culture
 2018/1/17,Special Effect,https://minecraft.net/zh-hans/article/special-effect,-,-,-,0,culture
 2018/1/17,Rotten Riches,https://minecraft.net/zh-hans/article/rotten-riches,-,-,-,0,culture
@@ -368,7 +368,7 @@ published,title,link,tr_title,tr_link,tr_uid,emeralded,cat
 2017/12/8,Block of the Week: Coal Ore,https://minecraft.net/zh-hans/article/block-week-coal-ore,本周方块：煤矿石,http://www.mcbbs.net/thread-771273-1-1.html,479737,1,insider:botw
 2017/12/6,Always Building: Deep Academy,https://minecraft.net/zh-hans/article/always-building-deep-academy,Always Building: Deep Academy,http://www.mcbbs.net/thread-777198-1-1.html,10240,1,culture
 2017/12/5,Survival Stories,https://minecraft.net/zh-hans/article/survival-stories,生存的故事,http://www.mcbbs.net/thread-771050-1-1.html,1142520,0,culture
-2017/12/1,Block of the Week: Stained Glass,https://minecraft.net/zh-hans/article/block-week-stained-glass,本周方块：染色玻璃,http://www.mcbbs.net/thread-770576-1-1.html,10240,0,insider:botw
+2017/12/1,Block of the Week: Stained Glass,https://minecraft.net/zh-hans/article/block-week-stained-glass,本周方块：染色玻璃,http://www.mcbbs.net/thread-770576-1-1.html,10240,1,insider:botw
 2017/11/29,Bold Eagle,https://minecraft.net/zh-hans/article/bold-eagle,鹰击长空,https://www.mcbbs.net/thread-975405-1-1.html,710691,0,culture
 2017/11/28,Mechanical Metropolis,https://minecraft.net/zh-hans/article/mechanical-metropolis,机械化的大都市,https://www.mcbbs.net/thread-975408-1-1.html,710691,0,culture
 2017/11/28,Dark Harvest Keep,https://minecraft.net/zh-hans/article/dark-harvest-keep,-,-,-,0,culture
@@ -474,10 +474,10 @@ published,title,link,tr_title,tr_link,tr_uid,emeralded,cat
 2017/7/5,Marked Man,https://minecraft.net/zh-hans/article/marked-man,万众瞩目之人,http://www.mcbbs.net/forum.php?mod=viewthread&tid=703638,564032,0,culture
 2017/7/3,Mcraft Escher,https://minecraft.net/zh-hans/article/mcraft-escher,视错觉艺术家MC ESCHER,http://www.mcbbs.net/forum.php?mod=viewthread&tid=703481,2216381,0,culture
 2017/7/2,Now on Marketplace: Space Battle Simulator,https://minecraft.net/zh-hans/article/now-marketplace-space-battle-simulator,-,-,-,0,insider
-2017/7/1,Dragon Scale,https://minecraft.net/zh-hans/article/dragon-scale,龙鳞,http://www.mcbbs.net/forum.php?mod=viewthread&tid=702310,564032,0,culture
+2017/7/1,Dragon Scale,https://minecraft.net/zh-hans/article/dragon-scale,龙鳞,http://www.mcbbs.net/forum.php?mod=viewthread&tid=702310,564032,1,culture
 2017/6/30,Block of the Week: Iron Ore,https://minecraft.net/zh-hans/article/block-week-iron-ore,本周方块：铁矿,http://www.mcbbs.net/forum.php?mod=viewthread&tid=701925,479737,0,insider:botw
 2017/6/29,Interview: Max Brooks,https://minecraft.net/zh-hans/article/interview-max-brooks,-,-,-,0,insider
-2017/6/28,Dare you enter?,https://minecraft.net/zh-hans/article/dare-you-enter,你敢进来吗？,http://www.mcbbs.net/forum.php?mod=viewthread&tid=701719,564032,0,culture
+2017/6/28,Dare you enter?,https://minecraft.net/zh-hans/article/dare-you-enter,你敢进来吗？,http://www.mcbbs.net/forum.php?mod=viewthread&tid=701719,564032,1,culture
 2017/6/26,Dungeon Creeper!,https://minecraft.net/zh-hans/article/dungeon-creeper,地牢爬行者,http://www.mcbbs.net/forum.php?mod=viewthread&tid=700996,564032,0,culture
 2017/6/23,Block of the Week: Magma,https://minecraft.net/zh-hans/article/block-week-magma,本周方块：岩浆块,http://www.mcbbs.net/forum.php?mod=viewthread&tid=700030,564032,0,insider:botw
 2017/6/22,Into the woods,https://minecraft.net/zh-hans/article/woods,-,-,-,0,culture
@@ -499,7 +499,7 @@ published,title,link,tr_title,tr_link,tr_uid,emeralded,cat
 2017/5/22,Meet the Ghast,https://minecraft.net/zh-hans/article/meet-ghast,聊聊恶魂,http://www.mcbbs.net/forum.php?mod=viewthread&tid=695166,1350847,0,insider:meet
 2017/5/20,All Aboard!,https://minecraft.net/zh-hans/article/all-aboard,-,-,-,0,culture
 2017/5/19,Block of the Week: Snow,https://minecraft.net/zh-hans/article/block-week-snow,本周方块：雪块,http://www.mcbbs.net/forum.php?mod=viewthread&tid=693032,1480882,0,insider:botw
-2017/5/17,Man Against Nature,https://minecraft.net/zh-hans/article/man-against-nature,征服自然之人,http://www.mcbbs.net/forum.php?mod=viewthread&tid=696176,564032,0,culture
+2017/5/17,Man Against Nature,https://minecraft.net/zh-hans/article/man-against-nature,征服自然之人,http://www.mcbbs.net/forum.php?mod=viewthread&tid=696176,564032,1,culture
 2017/5/16,All Conquering,https://minecraft.net/zh-hans/article/all-conquering,征服一切,http://www.mcbbs.net/forum.php?mod=viewthread&tid=693990,479737,1,culture
 2017/5/15,Meet the Creeper,https://minecraft.net/zh-hans/article/meet-creeper,聊聊爬行者,http://www.mcbbs.net/forum.php?mod=viewthread&tid=692531,1350847,0,insider:meet
 2017/5/13,For Valhalla,https://minecraft.net/zh-hans/article/valhalla,-,-,-,0,culture
@@ -525,7 +525,7 @@ published,title,link,tr_title,tr_link,tr_uid,emeralded,cat
 2017/4/12,Special Delivery,https://minecraft.net/zh-hans/article/special-delivery,特快专递,http://www.mcbbs.net/forum.php?mod=viewthread&tid=691255,2183198,0,culture
 2017/4/11,MC Buildcon 2017 Starts Friday,https://minecraft.net/zh-hans/article/mc-buildcon-2017-starts-friday,建筑嘉年华周五开始！,http://www.mcbbs.net/forum.php?mod=viewthread&tid=686313,2065001,0,culture
 2017/4/7,Block of the Week: Diamond,https://minecraft.net/zh-hans/article/block-week-diamond,本周方块：钻石,http://www.mcbbs.net/forum.php?mod=viewthread&tid=686024,1480882,0,insider:botw
-2017/4/6,Strange New Worlds,https://minecraft.net/zh-hans/article/strange-new-worlds,奇特的新世界,http://www.mcbbs.net/forum.php?mod=viewthread&tid=695204,564032,0,culture
+2017/4/6,Strange New Worlds,https://minecraft.net/zh-hans/article/strange-new-worlds,奇特的新世界,http://www.mcbbs.net/forum.php?mod=viewthread&tid=695204,564032,1,culture
 2017/4/5,Modern Art,https://minecraft.net/zh-hans/article/modern-art,现代艺术,http://www.mcbbs.net/forum.php?mod=viewthread&tid=695803,564032,1,culture
 2017/4/4,How to Build an Arrow Gauntlet,https://minecraft.net/zh-hans/article/how-build-arrow-gauntlet,-,-,-,0,insider
 2017/4/3,Top Ten Add-Ons,https://minecraft.net/zh-hans/article/top-ten-add-ons,附加包前十排行榜,http://www.mcbbs.net/forum.php?mod=viewthread&tid=684069,10240,1,insider
@@ -554,13 +554,13 @@ published,title,link,tr_title,tr_link,tr_uid,emeralded,cat
 2017/2/23,How to Minecraft,https://minecraft.net/zh-hans/article/how-minecraft,官方新手教程——怎么Minecraft？,http://www.mcbbs.net/forum.php?mod=viewthread&tid=676348,1350847,1,insider
 2017/2/21,Meet the Magma Cube,https://minecraft.net/zh-hans/article/meet-magma-cube,聊聊岩浆怪,http://www.mcbbs.net/forum.php?mod=viewthread&tid=675989,1350847,0,insider:meet
 2017/2/20,Shadows Over Midway,https://minecraft.net/zh-hans/article/shadows-over-midway,中途岛上空的阴影,http://www.mcbbs.net/forum.php?mod=viewthread&tid=691460,479737,1,culture
-2017/2/18,Flying Colours,https://minecraft.net/zh-hans/article/flying-colours,飞翔的颜色,http://www.mcbbs.net/forum.php?mod=viewthread&tid=695981,564032,0,culture
+2017/2/18,Flying Colours,https://minecraft.net/zh-hans/article/flying-colours,飞翔的颜色,http://www.mcbbs.net/forum.php?mod=viewthread&tid=695981,564032,1,culture
 2017/2/17,Block of the Week: Gold,https://minecraft.net/zh-hans/article/block-week-gold,本周方块：金块,http://www.mcbbs.net/forum.php?mod=viewthread&tid=675803,734534,0,insider:botw
 2017/2/15,Black Sails,https://minecraft.net/zh-hans/article/black-sails,黑色风帆,http://www.mcbbs.net/thread-775090-1-1.html,831959,0,culture
 2017/2/14,Beyond Good and Evil,https://minecraft.net/zh-hans/article/beyond-good-and-evil,在好与坏的那一边,http://www.mcbbs.net/forum.php?mod=viewthread&tid=682183,1678943,0,culture
 2017/2/13,Meet the Wither,https://minecraft.net/zh-hans/article/meet-wither,聊聊凋灵,http://www.mcbbs.net/thread-676808-1-1.html,1579221,0,insider:meet
 2017/2/11,Making Mythic Music,https://minecraft.net/zh-hans/article/making-mythic-music,神话配乐制作,http://www.mcbbs.net/forum.php?mod=viewthread&tid=675967,161872,1,insider
-2017/2/10,Block of the Week: Cactus,https://minecraft.net/zh-hans/article/block-week-cactus,本周方块：仙人掌,http://www.mcbbs.net/forum.php?mod=viewthread&tid=673384,10240,0,insider:botw
+2017/2/10,Block of the Week: Cactus,https://minecraft.net/zh-hans/article/block-week-cactus,本周方块：仙人掌,http://www.mcbbs.net/forum.php?mod=viewthread&tid=673384,10240,1,insider:botw
 2017/2/9,Food Festival,https://minecraft.net/zh-hans/article/food-festival,美食节,http://www.mcbbs.net/forum.php?mod=viewthread&tid=684795,1350847,1,culture
 2017/2/3,Block of the Week: Lapis Lazuli,https://minecraft.net/zh-hans/article/block-week-lapis-lazuli,本周方块：青金石,http://www.mcbbs.net/forum.php?mod=viewthread&tid=670522,3038,0,insider:botw
 2017/2/2,The Making of Diversity,https://minecraft.net/zh-hans/article/making-diversity,Diversity的制作过程,https://www.mcbbs.net/thread-910573-1-1.html,1686742,1,culture

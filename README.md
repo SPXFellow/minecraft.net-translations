@@ -76,7 +76,7 @@ python mcContent.py pull render
 
 如果收录的文章因机翻要素等原因在 MCBBS 被锁定，同时出现了新的翻译时，则会将其从目录中替换。
 
-在添加译文信息时，请在`tr_title`, `tr_link`, `tr_uid`字段添加译文标题，译文链接，译者UID。如果译文被收录，请将`emeralded`字段改为`1`.
+在添加译文信息时，请在`tr_title`, `tr_link`字段添加译文标题，译文链接。如果链接正确，原本为空的 UID 会在执行 `render` 命令时自动填写。当译文被收录后，请将`emeralded`字段改为`1`.
 
 
 
