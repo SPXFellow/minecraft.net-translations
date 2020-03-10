@@ -51,6 +51,12 @@ def render():
             将uid.json中已有的uid项目进行全部的更新。
         '''
         pass
+
+    def uidGet(link:str):
+        '''
+            获取指定链接的发帖者 uid。
+        '''
+        return BeautifulSoup(request.urlopen(link).read(),"html.parser").find("div",class_="authi").a.attrs["href"][len("home.php?mod=space&uid="):]
     
     def nameGet(uid):
         '''
@@ -64,9 +70,6 @@ def render():
             print("Welcome new translator:", usrName)
             with open(uidPath, "w", encoding="utf-8") as f:
                 json.dump(uid2name, f, ensure_ascii=False, indent=4)
-
-
-            
         return uid2name[uid]
     
     def toMarkdownTable(table, filename):
@@ -77,9 +80,6 @@ def render():
         no = "![](https://www.mcbbs.net/static/image/smiley/ornaments/barrier.png)|"
         with open(filename+".md", "w", encoding="utf-8") as f:
             strs = []
-
-
-
             header = "|日期|原文|译文|译者|认证|"
             splitter = "|---|---|---|---|---|"
             strs += [header, splitter]
@@ -96,26 +96,41 @@ def render():
                 except TypeError:
                     print(rec)
                     
-
-
             strs = [s + "\n" for s in strs]
             f.writelines(strs)
+        pass
 
     data = pd.read_csv("rawtable.csv", encoding='utf-8')
+    needUpdateRaw = False
+    
+    # 把各专栏和分类分别新建表格
     tables = {}
     for cat in cats:
         tables[cat] = pd.DataFrame(columns=["发布日期","原文标题","原文链接","译文标题","译文链接","译者","认证"])
     
+    # 把记录添加到对应的表格中
     for i, rec in data.iterrows():
         thiscat = rec["cat"]
+
+        if rec["tr_link"] not in ["-","不收录"] and rec["tr_uid"] == "-": # 未填写uid
+            rec["tr_uid"] = uidGet(rec["tr_link"])
+            print("Auto-filled uid", rec["tr_uid"], "for", rec["tr_link"])
+            data.loc[i,"tr_uid"] = rec["tr_uid"]
+            needUpdateRaw = True
+        
         tr_name = nameGet(rec["tr_uid"])
         emeralded = True if int(rec["emeralded"]) == 1 else False
+        
         tables[thiscat].loc[len(tables[thiscat])]= list(data.iloc[i][:-3])+[tr_name, emeralded] # rawtable[:-3]的记录顺序和输出表一致
     
+    # 输出 markdown 表格
     for cat in cats:
         print("making", cat)
         toMarkdownTable(tables[cat], cats[cat])
     
+    # 如果自动更新了 uid，那么相应地更新 rawtable
+    data.to_csv(path_or_buf="rawtable.csv", index=False, encoding='utf-8')
+
     pass
 
 def bbcode():
