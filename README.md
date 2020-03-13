@@ -21,9 +21,8 @@
 
 ## 文件
 
-- `rawtable.csv`：存放所有 culture 与 insider 分类的博文及翻译。
-- `mcContent.py`：使用 `python mcContents.py` 运行后会将官网上的新博文同步到上述两个表格中。
-
+* `rawtable.csv`：存放所有 culture 与 insider 分类的博文及翻译。
+* `mcContent.py`：使用 `python mcContents.py` 运行后会将官网上的新博文同步到上述表格中。
 * `config.json`：指示博文分类的对应名称。
 * `uid.json`：存放uid与昵称的对应关系，每月更新一次。
 * 其它`.md`文件：对应分类博文的目录。
@@ -51,6 +50,24 @@ python mcContent.py pull render
 如果你想在`rawtable.csv`中添加或编辑译文信息，推荐使用 VSCode 的 [janisdd.vscode-edit-csv](http://marketplace.visualstudio.com/items?itemName=janisdd.vscode-edit-csv) 插件。
 
 除非你知道自己在做什么，**不要**使用 Excel 等软件，这将导致包括乱码在内的问题。
+
+
+
+## 同步 MCBBS 官方博文录
+
+我们提供了一个能够将 [MCBBS 官方博文录](https://www.mcbbs.net/thread-675773-1-1.html)中的内容同步到 `rawtable.csv` 文件的脚本 `sync.js`。
+
+运行 JavaScript 脚本需要下载并安装 [Node.js](https://nodejs.org/zh-cn/download/)。长期支持版（LTS）是受到推荐的。
+
+该脚本没有任何参数，直接使用命令行工具执行即可。
+
+示例：
+
+```bash
+node sync
+```
+
+你可以后续执行命令块 `python mcContent.py render` 将相关改动渲染到 `*.md` 文档之中。
 
 
 
