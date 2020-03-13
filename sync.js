@@ -11,7 +11,7 @@ let count = 0
 /**
  * @type {{[username: string]: string}}
  */
-let username
+let username = {}
 /**
  * @type {string[][]}
  */
@@ -105,9 +105,9 @@ async function sync() {
     try {
         const start = new Date().getTime()
         await loadRawTable()
-        await loadUsername()
+        // await loadUsername()
         await merge()
-        await saveUsername()
+        // await saveUsername()
         await saveRawTable()
         console.log(`Successfully synchronised ${count} article(s) in ${new Date().getTime() - start}ms!`)
     } catch (e) {
