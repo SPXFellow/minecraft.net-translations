@@ -76,8 +76,8 @@ def render():
         '''
             将处理好的表格转换成markdown表格，便于阅读。
         '''
-        yes = "![](https://www.mcbbs.net/static/image/smiley/mcitem/emerald.png)|"
-        no = "![](https://www.mcbbs.net/static/image/smiley/ornaments/barrier.png)|"
+        no = "![](https://camo.githubusercontent.com/871c065fa2a7e6709f604e40a1bb11b47fb98a45/68747470733a2f2f7777772e6d636262732e6e65742f7374617469632f696d6167652f736d696c65792f6f726e616d656e74732f626172726965722e706e67)|"
+        yes = "![](https://camo.githubusercontent.com/5a5f2ad1957732d2a1ede71692435f25736ad9fb/68747470733a2f2f7777772e6d636262732e6e65742f7374617469632f696d6167652f736d696c65792f6d636974656d2f656d6572616c642e706e67)|"
         with open(filename+".md", "w", encoding="utf-8") as f:
             strs = []
             header = "|日期|原文|译文|译者|认证|"
