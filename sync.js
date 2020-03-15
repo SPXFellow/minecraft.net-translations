@@ -47,7 +47,8 @@ async function loadRawTable() {
     const content = await fs.readFile(RawTablePath, { encoding: 'utf8' })
     const rows = content.split(/\r?\n/)
     for (const row of rows) {
-        rawTable.push(row.split(','))
+        // https://stackoverflow.com/questions/21105360/regex-find-comma-not-inside-quotes/21106122
+        rawTable.push(row.split(/(?!\B"[^"]*),(?![^"]*"\B)/))
     }
 }
 
