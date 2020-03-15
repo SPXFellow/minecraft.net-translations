@@ -55,7 +55,7 @@ python mcContent.py pull render
 
 ## 同步 MCBBS 官方博文录
 
-我们提供了一个能够将 [MCBBS 官方博文录](https://www.mcbbs.net/thread-675773-1-1.html)中的内容同步到 `rawtable.csv` 文件的脚本 `sync.js`。
+我们提供了一个能够将 [MCBBS 官方博文录](https://www.mcbbs.net/thread-823054-1-1.html)中的内容同步到 `rawtable.csv` 文件的脚本 `sync.js`。
 
 运行 JavaScript 脚本需要下载并安装 [Node.js](https://nodejs.org/zh-cn/download/)。长期支持版（LTS）是受到推荐的。
 
@@ -73,7 +73,7 @@ node sync
 
 ## 说明
 
-[MCBBS 的官方博文录](https://www.mcbbs.net/thread-675773-1-1.html) 于近期调整了收录标准，剔除了很多不合格的博文。本目录主要是为了方便对历史已存在译文、最新博文译文的查询参考，
+[MCBBS 的官方博文录](https://www.mcbbs.net/thread-823054-1-1.html) 于近期调整了收录标准，剔除了很多不合格的博文。本目录主要是为了方便对历史已存在译文、最新博文译文的查询参考，
 
 **本目录仅供译文参考，不保证所收录译文的质量。**
 
@@ -101,5 +101,5 @@ node sync
 
 - 在线博文转换器 SPX：https://spgoding.com
 - 在线博文转换器 BCC：https://bcc.wd-ljt.com
-- MCBBS官方博文录：https://www.mcbbs.net/thread-675773-1-1.html  
+- MCBBS官方博文录：https://www.mcbbs.net/thread-823054-1-1.html  
 ![](https://attachment.mcbbs.net/forum/201909/14/001453yfroxnbheoot0nfm.png)
