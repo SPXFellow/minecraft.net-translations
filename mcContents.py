@@ -6,9 +6,22 @@ import sys, os
 from bs4 import BeautifulSoup
 
 def pull():
-    apiurl = 'https://www.minecraft.net/content/minecraft-net/_jcr_content.articles.grid?tagsPath=minecraft:article/insider,minecraft:article/culture&lang=/content/minecraft-net/language-masters/zh-hans&pageSize=100'
+    categories = [
+        "minecraft:article/insider",
+        "minecraft:article/culture",
+        "minecraft:stockholm/news",
+        "minecraft:stockholm/guides",
+        "minecraft:stockholm/events",
+        "minecraft:stockholm/minecraft-builds",
+        "minecraft:stockholm/marketplace",
+        "minecraft:stockholm/deep-dives",
+        "minecraft:stockholm/merch"
+    ]
+    #catestr = ",".join(categories)
+    #apiurl = 'https://www.minecraft.net/content/minecraft-net/_jcr_content.articles.grid?tagsPath=' + catestr + '&lang=/content/minecraft-net/language-masters/zh-hans&pageSize=100'
+    apiurl = 'https://www.minecraft.net/content/minecraft-net/_jcr_content.articles.grid?pageSize=100'
     
-    print("Pulling raw json file...")
+    print("Pulling raw json file from api", apiurl)
     prev_data = pd.read_csv("rawtable.csv", encoding='utf-8')
     last_5_titles = [prev_data.loc[x]["title"] for x in range(5)]
     last_pub = parser.parse(prev_data.loc[0]["published"])
@@ -110,7 +123,7 @@ def render():
     
     # 把记录添加到对应的表格中
     for i, rec in data.iterrows():
-        thiscat = rec["cat"]
+        recCats = rec["cat"].split(":") # if the category amount of an articles is more than 2, then use : to divide 
 
         if rec["tr_link"] not in ["-","不收录"] and rec["tr_uid"] == "-": # 未填写uid
             rec["tr_uid"] = uidGet(rec["tr_link"])
@@ -121,7 +134,8 @@ def render():
         tr_name = nameGet(rec["tr_uid"])
         emeralded = True if int(rec["emeralded"]) == 1 else False
         
-        tables[thiscat].loc[len(tables[thiscat])]= list(data.iloc[i][:-3])+[tr_name, emeralded] # rawtable[:-3]的记录顺序和输出表一致
+        for thiscat in recCats:
+            tables[thiscat].loc[len(tables[thiscat])]= list(data.iloc[i][:-3])+[tr_name, emeralded] # rawtable[:-3]的记录顺序和输出表一致
     
     # 输出 markdown 表格
     for cat in cats:
