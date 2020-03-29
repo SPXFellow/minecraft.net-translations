@@ -1,0 +1,23 @@
+name: Pull & Sync
+on: 
+  schedule: 
+    - cron: '*/30 * * * *'
+jobs:
+  pull:
+    name: Pull & Sync
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - name: Pull the latest articles
+      run: python mcContents.py pull
+    - name: Sync with the MCBBS collection
+      run: node sync
+    - name: Commit the changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "SPGlove"
+        git commit -m ":pencil: upd and sync" -a
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}

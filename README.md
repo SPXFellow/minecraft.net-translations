@@ -1,5 +1,7 @@
 # MINECRAFT.NET-TRANSLATIONS
 
+![status](https://github.com/RicoloveFeng/minecraft.net-translations/workflows/Pull%20%26%20Sync/badge.svg)
+
 寄存在 GitHub 上的官网博文翻译参考目录。从 2020 年 3 月 18 日起，本仓库将收录全部分类的官网博文。
 
 **本目录仅供译文参考，不保证所收录译文的质量。**
