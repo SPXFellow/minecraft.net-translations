@@ -7,7 +7,7 @@ jobs:
     name: Pull & Sync
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@master
+    - uses: actions/checkout@v2
     - name: Pull the latest articles
       run: python mcContents.py pull
     - name: Sync with the MCBBS collection
@@ -16,7 +16,7 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "SPGlove"
-        git commit -m ":pencil: upd and sync" -a
+        git commit -m ":arrows_counterclockwise: upd and sync" -a
     - name: Push changes
       uses: ad-m/github-push-action@master
       with:

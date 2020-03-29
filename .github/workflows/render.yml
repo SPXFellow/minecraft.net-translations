@@ -1,0 +1,19 @@
+name: Render
+on: push
+jobs:
+  pull:
+    name: Render
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Render the rawtable
+      run: python mcContents.py render
+    - name: Commit the changes
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "Ricoding"
+        git commit -m ":pencil: render" -a
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
