@@ -2,6 +2,10 @@
 
 寄存在 GitHub 上的官网博文翻译参考目录。从 2020 年 3 月 18 日起，本仓库将收录全部分类的官网博文。
 
+**本目录仅供译文参考，不保证所收录译文的质量。**
+
+部分不属于文章的视频链接类官网内容（点击后跳转到Youtube）可能不会被包含在本目录中。
+
 
 
 ## 重要提示（临时）
@@ -10,43 +14,50 @@
 
 以下更新内容需要您注意：
 
-* **本目录的维护尚未完成，但是您可以先点击各个子目录的 .md 文件来查看内容。**
 * 与以往不同，现在一个博文可能会出现在多个子目录中。
 * 本目录将会收录从 2020 年 3 月 18 日起的 NEWS 和 MERCH 分类的博文，过往博文暂时不考虑追加。
-* 对于部分不参与绿宝石发放的博文，在译文出现后可能会直接标注为认证文章。
 
 
 
 ## 子目录
 
-目前，你可以直接在 GitHub 仓库中浏览以下分类的表格：
+### 官网博文分类
 
-其中，认证一栏的屏障代表尚未被收录或未达到收录标准，绿宝石代表已经被收录。
+|  分类名称 | 分类原名  |
+| ---- | ---- |
+| [内部资讯](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E5%86%85%E9%83%A8%E8%B5%84%E8%AE%AF.md) | INSIDER |
+| [社区文化](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E7%A4%BE%E5%8C%BA%E6%96%87%E5%8C%96.md) | CULTURE |
+| [建筑展示](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E5%BB%BA%E7%AD%91%E5%B1%95%E7%A4%BA.md) | MINECRAFT BUILDS |
+| [市场消息](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E5%B8%82%E5%9C%BA%E6%B6%88%E6%81%AF.md) | MARKETPLACE |
+| [块海拾贝](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E5%9D%97%E6%B5%B7%E6%8B%BE%E8%B4%9D.md) | DEEP DIVES |
+| 教程指导（暂无文章） | GUIDES |
+| 大事件（暂无文章） | EVENTS |
+| 周边产品（暂无文章） | MERCH |
+| [新闻资讯](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E6%96%B0%E9%97%BB%E8%B5%84%E8%AE%AF.md) | NEWS |
+
+
+
+### 专栏文章与视频系列
+
+| 专栏或视频名称                 | 原名称                                |
+| ------------------------------ | ------------------------------------- |
+| [每周方块](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E6%AF%8F%E5%91%A8%E6%96%B9%E5%9D%97.md)                       | Block of the Week                     |
+| [遇见生物](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E9%81%87%E8%A7%81%E7%94%9F%E7%89%A9.md)                       | Meet the ...                          |
+| [背包盘点](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E8%83%8C%E5%8C%85%E7%9B%98%E7%82%B9.md)                       | Taking Inventory                      |
+| [与之建造](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E4%B8%8E%E4%B9%8B%E5%BB%BA%E9%80%A0.md) | Build with it                         |
+| :film_strip:[《Minecraft：地下城》开发日志](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E5%9C%B0%E4%B8%8B%E5%9F%8E%E6%97%A5%E5%BF%97.md) | Dungeon Diary                         |
+| :film_strip: [十件你或许不知道的事情](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E5%8D%81%E6%88%96%E4%B8%8D%E7%9F%A5.md)        | 10 Things You Don't Know About ...    |
+| [版本资讯](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E7%89%88%E6%9C%AC%E8%B5%84%E8%AE%AF.md)                       | （无，收录 Minecraft 新版本发布博文） |
+
+
+
+### 表格认证项说明
+
+对于除新闻资讯类的博文，认证一栏的屏障代表尚未被收录或未达到收录标准，绿宝石代表已经被收录。
+
+对于发表在新闻资讯板块下帖子，由于其一般不参与绿宝石发放和博文收录，有译文的时候默认为收录。
 
 图片素材版权归 Mojang 所有。
-
-
-
-### 按照 Minecraft.net API 分类
-
-* [内部资讯 INSIDER](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E5%86%85%E9%83%A8%E8%B5%84%E8%AE%AF.md)
-* [块海拾贝 DEEP DIVES](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E5%9D%97%E6%B5%B7%E6%8B%BE%E8%B4%9D.md)
-* [市场消息 MERCH](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E5%B8%82%E5%9C%BA%E6%B6%88%E6%81%AF.md)
-* [建筑展示 MINECRAFT BUILDS](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E5%BB%BA%E7%AD%91%E5%B1%95%E7%A4%BA.md)
-* [新闻资讯 NEWS](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E6%96%B0%E9%97%BB%E8%B5%84%E8%AE%AF.md)
-* [社区文化 CULTURE](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E7%A4%BE%E5%8C%BA%E6%96%87%E5%8C%96.md)
-
-
-
-### 按照博文内容分类
-
-* [与之建造 BWI](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E4%B8%8E%E4%B9%8B%E5%BB%BA%E9%80%A0.md)
-* [十或不知 10](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E5%8D%81%E6%88%96%E4%B8%8D%E7%9F%A5.md)
-* [地下城日志 DD](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E5%9C%B0%E4%B8%8B%E5%9F%8E%E6%97%A5%E5%BF%97.md)
-* [每周方块 BOTW](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E6%AF%8F%E5%91%A8%E6%96%B9%E5%9D%97.md)
-* [版本资讯 VERSION](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E7%89%88%E6%9C%AC%E8%B5%84%E8%AE%AF.md)
-* [背包盘点 TI](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E8%83%8C%E5%8C%85%E7%9B%98%E7%82%B9.md)
-* [遇见生物 MEET](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E9%81%87%E8%A7%81%E7%94%9F%E7%89%A9.md)
 
 
 
@@ -102,19 +113,11 @@ node sync
 
 
 
-## 说明
-
-[MCBBS 的官方博文录](https://www.mcbbs.net/thread-823054-1-1.html) 于近期调整了收录标准，剔除了很多不合格的博文。本目录主要是为了方便对历史已存在译文、最新博文译文的查询参考，
-
-**本目录仅供译文参考，不保证所收录译文的质量。**
-
-部分不属于文章的视频链接类官网内容（点击后跳转到Youtube）可能不会被包含在本目录中。
-
-
-
 ## 收录与替换
 
 在 MCBBS 【翻译 & Wiki】 板块使用官网博文分类发帖，如果帖子符合基本标准（标题、正文链接、非机翻等），则本目录会将其收录。
+
+对于新闻资讯板块下的帖子，直接将其收录。
 
 出现同一博文的不同翻译版本，质量差异不大时收录最早发布的版本，质量存在明显差异时取更优的版本。
 
