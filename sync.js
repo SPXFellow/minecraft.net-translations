@@ -127,7 +127,7 @@ async function sync() {
 }
 
 Promise
-    .race(sync(), new Promise(resolve => setTimeout(resolve, 60_000)))
+    .race([sync(), new Promise(resolve => setTimeout(resolve, 60_000))])
     .then(() => {
         console.log("Process exit.")
         process.exit()
