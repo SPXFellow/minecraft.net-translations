@@ -31,7 +31,7 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "SPGlove"
           git add .
-          git diff-index --quiet HEAD || git commit -m ":pencil: render"
+          git diff-index --quiet HEAD || git commit -m ":arrows_counterclockwise: pull and sync"
 
       - name: Push changes
         uses: ad-m/github-push-action@master
