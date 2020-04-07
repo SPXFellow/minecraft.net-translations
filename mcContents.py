@@ -29,7 +29,6 @@ def pull():
     new_article_list = json.loads(request.urlopen(apiurl).read())['article_grid']
     new_article_data = pd.DataFrame(columns=prev_data.columns)
 
-
     for art in new_article_list:
         title = art["default_tile"]["title"]
         pub = parser.parse(art["publish_date"]).replace(tzinfo=None)
@@ -163,9 +162,22 @@ if __name__ == "__main__":
             showHelp()
             exit()
     for opr in sys.argv[1:]:
-        if opr == "pull":
-            pull()
-        elif opr == "render":
-            render()
-        elif opr == "bbcode":
-            bbcode()
+        errorTimes = 0
+        MAX_ERROR_TIME = 3
+        while True:
+            try:
+                if opr == "pull":
+                    pull()
+                elif opr == "render":
+                    render()
+                elif opr == "bbcode":
+                    bbcode()
+            except Exception as e:
+                print("An error occured when tring to", opr, "- total try:", errorTimes + 1)
+                print("Error info:", e)
+                errorTimes += 1
+                if errorTimes == MAX_ERROR_TIME:
+                    raise e
+            else:
+                break
+
