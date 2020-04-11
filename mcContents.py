@@ -19,12 +19,11 @@ def pull():
     ]
     #catestr = ",".join(categories)
     #apiurl = 'https://www.minecraft.net/content/minecraft-net/_jcr_content.articles.grid?tagsPath=' + catestr + '&lang=/content/minecraft-net/language-masters/zh-hans&pageSize=100'
-    apiurl = 'https://www.minecraft.net/content/minecraft-net/_jcr_content.articles.grid?pageSize=100'
+    apiurl = 'https://www.minecraft.net/content/minecraft-net/_jcr_content.articles.grid?pageSize=30'
     
     print("Pulling raw json file from api", apiurl)
     prev_data = pd.read_csv("rawtable.csv", encoding='utf-8')
-    last_5_titles = [prev_data.loc[x]["title"] for x in range(5)]
-    last_pub = parser.parse(prev_data.loc[0]["published"])
+    last_titles = [prev_data.loc[x]["title"] for x in range(50)]
 
     new_article_list = json.loads(request.urlopen(apiurl).read())['article_grid']
     new_article_data = pd.DataFrame(columns=prev_data.columns)
@@ -33,8 +32,8 @@ def pull():
         title = art["default_tile"]["title"]
         pub = parser.parse(art["publish_date"]).replace(tzinfo=None)
         
-        if title in last_5_titles or pub < last_pub:
-            break
+        if title in last_titles:
+            continue
         
         print("Adding new article:", title)
         link = 'https://www.minecraft.net' + art["article_url"]
