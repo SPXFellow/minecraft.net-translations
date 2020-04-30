@@ -36,7 +36,10 @@ def pull():
             continue
         
         print("Adding new article:", title)
-        link = 'https://www.minecraft.net' + art["article_url"]
+        if "linkurl" in art["default_tile"]["image"]:
+            link = art["default_tile"]["image"]["linkurl"]
+        else:
+            link = 'https://www.minecraft.net' + art["article_url"]
         pub = str(pub.year) + "/" + str(pub.month) + "/" + str(pub.day)
         cat = art["primary_category"].lower()
         new_article_data.loc[len(new_article_data)]=[pub,title,link,'-','-','-','0',cat] # tr title, tr link, tr uid
