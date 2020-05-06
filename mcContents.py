@@ -78,8 +78,8 @@ def render():
         '''
         if uid not in uid2name:
             assert(int(uid) > 0)
-            usrUrl = 'https://www.mcbbs.net/home.php?mod=space&uid=' + uid
-            usrName = BeautifulSoup(request.urlopen(usrUrl).read(),"html.parser").find("title").text[:-len("的个人资料 -  Minecraft(我的世界)中文论坛 - ")]
+            usrUrl = 'https://www.mcbbs.net/api/mobile/index.php?module=profile&uid=' + uid
+            usrName = json.loads(request.urlopen(usrUrl).read())["Variables"]["space"]["username"]
             uid2name[uid] = usrName
             print("Welcome new translator:", usrName)
             with open(uidPath, "w", encoding="utf-8") as f:
