@@ -103,7 +103,10 @@ def render():
                     thisstr = "|"
                     thisstr += rec["发布日期"] + "|"
                     thisstr += "[" + rec["原文标题"] + "]("+ rec["原文链接"] + ")|"
-                    thisstr += "[" + rec["译文标题"] + "]("+ rec["译文链接"] + ")|" if rec["译文标题"] != "-" else "-|"
+                    if rec["译文链接"] != "-":
+                        thisstr += "[" + rec["译文标题"] + "]("+ rec["译文链接"] + ")|"
+                    else:
+                        thisstr += rec["译文标题"] + "|"
                     thisstr += rec["译者"] + "|"
                     thisstr += yes if rec["认证"] else no
                     strs.append("".join(thisstr))
@@ -144,7 +147,8 @@ def render():
         toMarkdownTable(tables[cat], cats[cat])
     
     # 如果自动更新了 uid，那么相应地更新 rawtable
-    data.to_csv(path_or_buf="rawtable.csv", index=False, encoding='utf-8')
+    if needUpdateRaw:
+        data.to_csv(path_or_buf="rawtable.csv", index=False, encoding='utf-8')
 
     pass
 
