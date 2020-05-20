@@ -18,14 +18,14 @@
 |  分类名称 | 分类原名  |
 | ---- | ---- |
 | [内部资讯](./contents/内部资讯.md) | INSIDER |
-| [社区文化](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E7%A4%BE%E5%8C%BA%E6%96%87%E5%8C%96.md) | CULTURE |
-| [建筑展示](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E5%BB%BA%E7%AD%91%E5%B1%95%E7%A4%BA.md) | MINECRAFT BUILDS |
-| [市场消息](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E5%B8%82%E5%9C%BA%E6%B6%88%E6%81%AF.md) | MARKETPLACE |
-| [块海拾贝](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E5%9D%97%E6%B5%B7%E6%8B%BE%E8%B4%9D.md) | DEEP DIVES |
+| [社区文化](./contents/社区文化.md) | CULTURE |
+| [建筑展示](./contents/建筑展示.md) | MINECRAFT BUILDS |
+| [市场消息](./contents/市场消息.md) | MARKETPLACE |
+| [块海拾贝](./contents/块海拾贝.md) | DEEP DIVES |
 | 教程指导（暂无文章） | GUIDES |
 | 大事件（暂无文章） | EVENTS |
 | 周边产品（暂无文章） | MERCH |
-| [新闻资讯](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E6%96%B0%E9%97%BB%E8%B5%84%E8%AE%AF.md) | NEWS |
+| [新闻资讯](./contents/新闻资讯.md) | NEWS |
 
 
 
@@ -33,13 +33,13 @@
 
 | 专栏或视频名称                 | 原名称                                |
 | ------------------------------ | ------------------------------------- |
-| [每周方块](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E6%AF%8F%E5%91%A8%E6%96%B9%E5%9D%97.md)                       | Block of the Week                     |
-| [遇见生物](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E9%81%87%E8%A7%81%E7%94%9F%E7%89%A9.md)                       | Meet the ...                          |
-| [背包盘点](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E8%83%8C%E5%8C%85%E7%9B%98%E7%82%B9.md)                       | Taking Inventory                      |
-| [与之建造](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E4%B8%8E%E4%B9%8B%E5%BB%BA%E9%80%A0.md) | Build with it                         |
-| :film_strip:[《Minecraft：地下城》开发日志](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E5%9C%B0%E4%B8%8B%E5%9F%8E%E6%97%A5%E5%BF%97.md) | Dungeon Diary                         |
-| :film_strip: [十件你或许不知道的事情](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E5%8D%81%E6%88%96%E4%B8%8D%E7%9F%A5.md)        | 10 Things You Don't Know About ...    |
-| [版本资讯](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E7%89%88%E6%9C%AC%E8%B5%84%E8%AE%AF.md)                       | （无，收录 Minecraft 新版本发布博文） |
+| [每周方块](./contents/每周方块.md)                       | Block of the Week                     |
+| [遇见生物](./contents/遇见生物.md)                       | Meet the ...                          |
+| [背包盘点](./contents/背包盘点.md)                       | Taking Inventory                      |
+| [与之建造](./contents/与之建造.md) | Build with it                         |
+| :film_strip:[《Minecraft：地下城》开发日志](./contents/地下城日志.md) | Dungeon Diary                         |
+| :film_strip: [十件你或许不知道的事情](./contents/十或不知.md)        | 10 Things You Don't Know About ...    |
+| [版本资讯](./contents/版本资讯.md)                       | （无，收录 Minecraft 新版本发布博文） |
 
 
 
