@@ -17,7 +17,7 @@
 
 |  分类名称 | 分类原名  |
 | ---- | ---- |
-| [内部资讯](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E5%86%85%E9%83%A8%E8%B5%84%E8%AE%AF.md) | INSIDER |
+| [内部资讯](./contents/内部资讯.md) | INSIDER |
 | [社区文化](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E7%A4%BE%E5%8C%BA%E6%96%87%E5%8C%96.md) | CULTURE |
 | [建筑展示](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E5%BB%BA%E7%AD%91%E5%B1%95%E7%A4%BA.md) | MINECRAFT BUILDS |
 | [市场消息](https://github.com/RicoloveFeng/minecraft.net-translations/blob/master/%E5%B8%82%E5%9C%BA%E6%B6%88%E6%81%AF.md) | MARKETPLACE |

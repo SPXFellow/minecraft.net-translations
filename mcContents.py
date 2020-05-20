@@ -92,7 +92,7 @@ def render():
         '''
         no = "![barrier](https://user-images.githubusercontent.com/15277496/76684847-3c2d4900-65dd-11ea-8d91-c7be623cf3d2.png)|"
         yes = "![emerald](https://user-images.githubusercontent.com/15277496/76684841-320b4a80-65dd-11ea-8206-e766bbbd3b7d.png)|"
-        with open(filename+".md", "w", encoding="utf-8") as f:
+        with open("./contents/"+filename+".md", "w", encoding="utf-8") as f:
             strs = []
             header = "|日期|原文|译文|译者|认证|"
             splitter = "|---|---|---|---|---|"
