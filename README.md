@@ -13,7 +13,7 @@
 
 ## 目录一览表
 
-### 官网博文分类
+### 官网博文栏目分类
 
 |  分类名称 | 分类原名  |
 | ---- | ---- |
@@ -22,10 +22,23 @@
 | [建筑展示](./contents/建筑展示.md) | MINECRAFT BUILDS |
 | [市场消息](./contents/市场消息.md) | MARKETPLACE |
 | [块海拾贝](./contents/块海拾贝.md) | DEEP DIVES |
-| 教程指导（暂无文章） | GUIDES |
-| 大事件（暂无文章） | EVENTS |
-| 周边产品（暂无文章） | MERCH |
+| 教程指导 | GUIDES |
+| 大事件 | EVENTS |
+| 周边产品 | MERCH |
 | [新闻资讯](./contents/新闻资讯.md) | NEWS |
+
+
+
+### 游戏相关分类
+
+| 分类名称                                 | 分类原名    |
+| ---------------------------------------- | ----------- |
+| 我的世界：地球                           | EARTH       |
+| [我的世界：地下城](./contents/地下城.md) | DUNGEON     |
+| Realms Plus                              | REALMS-PLUS |
+| Realms Java                              | REALMS-JAVA |
+| 我的世界                                 | MINECRAFT   |
+| 下界                                     | NETHER      |
 
 
 
