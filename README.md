@@ -27,7 +27,18 @@
 | 周边产品 | MERCH |
 | [新闻资讯](./contents/新闻资讯.md) | NEWS |
 
+### 专栏文章与视频系列
 
+| 专栏或视频名称                 | 原名称                                |
+| ------------------------------ | ------------------------------------- |
+| [每周方块](./contents/每周方块.md)                       | Block of the Week                     |
+| [遇见生物](./contents/遇见生物.md)                       | Meet the ...                          |
+| [背包盘点](./contents/背包盘点.md)                       | Taking Inventory                      |
+| [与之建造](./contents/与之建造.md) | Build with it                         |
+| [群系漫游](./contents/群系漫游.md) | Around the Block |
+| :film_strip:[《Minecraft：地下城》开发日志](./contents/地下城日志.md) | Dungeon Diary                         |
+| :film_strip: [十件你或许不知道的事情](./contents/十或不知.md)        | 10 Things You Don't Know About ...    |
+| [版本资讯](./contents/版本资讯.md)                       | （无，收录 Minecraft 新版本发布博文） |
 
 ### 游戏相关分类
 
@@ -39,22 +50,6 @@
 | Realms Java                              | REALMS-JAVA |
 | 我的世界                                 | MINECRAFT   |
 | 下界                                     | NETHER      |
-
-
-
-### 专栏文章与视频系列
-
-| 专栏或视频名称                 | 原名称                                |
-| ------------------------------ | ------------------------------------- |
-| [每周方块](./contents/每周方块.md)                       | Block of the Week                     |
-| [遇见生物](./contents/遇见生物.md)                       | Meet the ...                          |
-| [背包盘点](./contents/背包盘点.md)                       | Taking Inventory                      |
-| [与之建造](./contents/与之建造.md) | Build with it                         |
-| :film_strip:[《Minecraft：地下城》开发日志](./contents/地下城日志.md) | Dungeon Diary                         |
-| :film_strip: [十件你或许不知道的事情](./contents/十或不知.md)        | 10 Things You Don't Know About ...    |
-| [版本资讯](./contents/版本资讯.md)                       | （无，收录 Minecraft 新版本发布博文） |
-
-
 
 ### 表格认证项说明
 
