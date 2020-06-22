@@ -22,7 +22,7 @@
 | [建筑展示](./contents/建筑展示.md) | MINECRAFT BUILDS |
 | [市场消息](./contents/市场消息.md) | MARKETPLACE |
 | [块海拾贝](./contents/块海拾贝.md) | DEEP DIVES |
-| 教程指导 | GUIDES |
+| [教程指导](./contents/教程指导.md) | GUIDES |
 | 大事件 | EVENTS |
 | 周边产品 | MERCH |
 | [新闻资讯](./contents/新闻资讯.md) | NEWS |
