@@ -135,7 +135,11 @@ def render():
             data.loc[i,"tr_uid"] = rec["tr_uid"]
             needUpdateRaw = True
         
-        tr_name = nameGet(rec["tr_uid"])
+        try:
+            tr_name = nameGet(rec["tr_uid"])
+        except:
+            print("fail at", rec["tr_uid"], rec["tr_link"])
+            exit(-1)
         emeralded = True if int(rec["emeralded"]) == 1 else False
         
         for thiscat in recCats:
