@@ -46,7 +46,7 @@
 | ---------------------------------------- | ----------- |
 | 我的世界：地球                           | EARTH       |
 | [我的世界：地下城](./contents/地下城.md) | DUNGEON     |
-| Realms Plus                              | REALMS-PLUS |
+| [Realms Plus](./contents/realms+.md)  | REALMS-PLUS |
 | Realms Java                              | REALMS-JAVA |
 | 我的世界                                 | MINECRAFT   |
 | 下界                                     | NETHER      |
@@ -54,6 +54,8 @@
 ### 表格认证项说明
 
 对于除新闻资讯类的博文，认证一栏的![barrier](https://user-images.githubusercontent.com/15277496/76684847-3c2d4900-65dd-11ea-8d91-c7be623cf3d2.png)屏障代表尚未被收录或未达到收录标准，![emerald](https://user-images.githubusercontent.com/15277496/76684841-320b4a80-65dd-11ea-8206-e766bbbd3b7d.png)绿宝石代表已经被收录。
+
+本仓库不一定能及时同步收录信息，请以论坛置顶帖为准。
 
 对于发表在新闻资讯板块下帖子，由于其一般不参与绿宝石发放和博文收录，有译文的时候默认为收录。
 
