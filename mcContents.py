@@ -130,7 +130,11 @@ def render():
         recCats = rec["cat"].split(":") # if the category amount of an articles is more than 2, then use : to divide 
 
         if rec["tr_link"] not in ["-","不收录"] and rec["tr_uid"] == "-": # 未填写uid
-            rec["tr_uid"] = uidGet(rec["tr_link"])
+            try:
+                rec["tr_uid"] = uidGet(rec["tr_link"])
+            except:
+                print("fail at", rec["tr_uid"], rec["tr_link"])
+                exit(-1)
             print("Auto-filled uid", rec["tr_uid"], "for", rec["tr_link"])
             data.loc[i,"tr_uid"] = rec["tr_uid"]
             needUpdateRaw = True
