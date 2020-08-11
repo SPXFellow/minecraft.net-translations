@@ -132,8 +132,9 @@ def render():
         if rec["tr_link"] not in ["-","不收录"] and rec["tr_uid"] == "-": # 未填写uid
             try:
                 rec["tr_uid"] = uidGet(rec["tr_link"])
-            except:
+            except Exception as e:
                 print("fail at", rec["tr_uid"], rec["tr_link"])
+                print("Error:", e)
                 exit(-1)
             print("Auto-filled uid", rec["tr_uid"], "for", rec["tr_link"])
             data.loc[i,"tr_uid"] = rec["tr_uid"]
