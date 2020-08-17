@@ -3,6 +3,10 @@
 ![pull & sync](https://github.com/RicoloveFeng/minecraft.net-translations/workflows/Pull%20%26%20Sync/badge.svg)
 ![render](https://github.com/RicoloveFeng/minecraft.net-translations/workflows/Render/badge.svg)
 
+<div style="color:Red;">注意：本仓库目前暂停维护论坛翻译的收录，但是脚本仍会自动采集最新的官网博文。如果你有意向参与维护本仓库，请提交 pull request 或者与我联系获得 push 权限。</p>
+
+
+
 寄存在 GitHub 上的官网博文翻译参考目录。从 2020 年 3 月 18 日起，本仓库将收录全部分类的官网博文。
 
 **本目录仅供译文参考，不保证所收录译文的质量。**
