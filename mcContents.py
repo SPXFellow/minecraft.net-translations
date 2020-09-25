@@ -6,46 +6,44 @@ import sys, os
 from bs4 import BeautifulSoup
 
 def pull():
-    categories = [
-        "minecraft:article/insider",
-        "minecraft:article/culture",
-        "minecraft:stockholm/news",
-        "minecraft:stockholm/guides",
-        "minecraft:stockholm/events",
-        "minecraft:stockholm/minecraft-builds",
-        "minecraft:stockholm/marketplace",
-        "minecraft:stockholm/deep-dives",
-        "minecraft:stockholm/merch"
-    ]
-    #catestr = ",".join(categories)
-    #apiurl = 'https://www.minecraft.net/content/minecraft-net/_jcr_content.articles.grid?tagsPath=' + catestr + '&lang=/content/minecraft-net/language-masters/zh-hans&pageSize=100'
+    def tagChecked(art):
+        '''
+            Some tag may be missed in article json, making auto-pulling failed.
+            This function asserts that some vital tags exist. 
+        '''
+        return ("default_tile" in art
+                and "publish_date" in art
+                and  "primary_category" in art)
+    
     apiurl = 'https://www.minecraft.net/content/minecraft-net/_jcr_content.articles.grid?pageSize=30'
     
     print("Pulling raw json file from api", apiurl)
+    new_article_list = json.loads(request.urlopen(apiurl).read())['article_grid']
+
+    # Read fields and last article from local table
     prev_data = pd.read_csv("rawtable.csv", encoding='utf-8')
     last_titles = [prev_data.loc[x]["title"] for x in range(50)]
-
-    new_article_list = json.loads(request.urlopen(apiurl).read())['article_grid']
     new_article_data = pd.DataFrame(columns=prev_data.columns)
 
     for art in new_article_list:
-        title = art["default_tile"]["title"]
-        pub = parser.parse(art["publish_date"]).replace(tzinfo=None)
-        
-        if title in last_titles:
-            continue
-        
-        print("Adding new article:", title)
-        if "linkurl" in art["default_tile"]["image"]:
-            link = art["default_tile"]["image"]["linkurl"]
-        else:
-            link = 'https://www.minecraft.net' + art["article_url"]
-        pub = str(pub.year) + "/" + str(pub.month) + "/" + str(pub.day)
-        cat = art["primary_category"].lower()
-        new_article_data.loc[len(new_article_data)]=[pub,title,link,'-','-','-','0',cat] # tr title, tr link, tr uid
+        if tagChecked(art):
+            title = art["default_tile"]["title"]
+            pub = parser.parse(art["publish_date"]).replace(tzinfo=None)
+            
+            if title in last_titles:
+                continue
+            
+            print("Adding new article:", title)
+            if "linkurl" in art["default_tile"]["image"]:
+                link = art["default_tile"]["image"]["linkurl"]
+            else:
+                link = 'https://www.minecraft.net' + art["article_url"]
+            pub = str(pub.year) + "/" + str(pub.month) + "/" + str(pub.day)
+            cat = art["primary_category"].lower()
+            new_article_data.loc[len(new_article_data)]=[pub,title,link,'-','-','-','0',cat] # tr title, tr link, tr uid
     
-    pd.concat([new_article_data,prev_data]).to_csv(path_or_buf="rawtable.csv", index=False, encoding='utf-8')
     if len(new_article_data) != 0:
+        pd.concat([new_article_data,prev_data]).to_csv(path_or_buf="rawtable.csv", index=False, encoding='utf-8')
         print("Successfully pulled.")
     else:
         print("Already up-to-date.")
@@ -178,7 +176,7 @@ if __name__ == "__main__":
             exit()
     for opr in sys.argv[1:]:
         errorTimes = 0
-        MAX_ERROR_TIME = 3
+        MAX_ERROR_TIME = 0
         while True:
             try:
                 if opr == "pull":
