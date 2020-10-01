@@ -3,7 +3,6 @@
 ![pull & sync](https://github.com/RicoloveFeng/minecraft.net-translations/workflows/Pull%20%26%20Sync/badge.svg)
 ![render](https://github.com/RicoloveFeng/minecraft.net-translations/workflows/Render/badge.svg)
 
-<div style="color:Red;">注意：本仓库目前暂停维护论坛翻译的收录，但是脚本仍会自动采集最新的官网博文。如果你有意向参与维护本仓库，请提交 pull request 或者与我联系获得 push 权限。</p>
 
 
 
@@ -27,7 +26,7 @@
 | [市场消息](./contents/市场消息.md) | MARKETPLACE |
 | [块海拾贝](./contents/块海拾贝.md) | DEEP DIVES |
 | [教程指导](./contents/教程指导.md) | GUIDES |
-| 大事件 | EVENTS |
+| [大事件](./contents/大事件.md) | EVENTS |
 | 周边产品 | MERCH |
 | [新闻资讯](./contents/新闻资讯.md) | NEWS |
 
@@ -83,7 +82,7 @@
 
 * `pull`：将`rawtable.csv`更新到最新状态。
 * `render`：根据分类输出不同的`.csv`文件。
-* <s>`bbcode`：按分类切分并输出bbcode表格，bbcode存放在`bbcode.txt`中。</s> 该功能暂未实现。
+* `update`：更新 `uid.json` 中的用户名称。
 
 示例：
 

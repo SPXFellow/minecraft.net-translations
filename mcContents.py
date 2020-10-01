@@ -5,6 +5,9 @@ import json
 import sys, os
 from bs4 import BeautifulSoup
 
+catPath = "config.json"
+uidPath = "uid.json"
+
 def pull():
     def tagChecked(art):
         '''
@@ -50,19 +53,11 @@ def pull():
     pass
 
 def render():
-    catPath = "config.json"
-    uidPath = "uid.json"
+    global catPath, uidPath
     with open(catPath, "r", encoding="utf-8") as f:
         cats = json.loads(f.read())
     with open(uidPath, "r", encoding="utf-8") as f:
         uid2name = json.loads(f.read())
-        
-    
-    def uidUpdate():
-        '''
-            将uid.json中已有的uid项目进行全部的更新。
-        '''
-        pass
 
     def uidGet(link:str):
         '''
@@ -159,19 +154,34 @@ def render():
 
     pass
 
-def bbcode():
-    print("Not support now")
+def update():
+    '''
+        将uid.json中已有的uid项目进行全部的更新。
+    '''
+    global uidPath
+    with open(uidPath, "r", encoding="utf-8") as f:
+        uid2name = json.loads(f.read())
+    for uid in uid2name:
+        if uid not in ["0","-","9999999999"]:
+            usrUrl = 'https://www.mcbbs.net/home.php?mod=space&uid=' + uid
+            usrName = BeautifulSoup(request.urlopen(usrUrl).read(),"html.parser").find("title").text[:-len("的个人资料 -  Minecraft(我的世界)中文论坛 - ")]
+            if uid2name[uid] != usrName:
+                print("User", uid, "changed name from", uid2name[uid], "to", usrName)
+                uid2name[uid] = usrName
+    with open(uidPath, "w", encoding="utf-8") as f:
+        json.dump(uid2name, f, ensure_ascii=False, indent=4)
+    
 
 
 def showHelp():
-    print("Usage: mcContent.py <pull|render|bbcode>")
+    print("Usage: mcContent.py <pull|render|update>")
     print("\tpull - Get latest articles and write to rawtable.csv")
     print("\trender - Divide rawtable.csv into different files according to config.json")
-    print("\tbbcode - Output bbcode table with articles in corresponding category")
+    print("\tupdate - Update uid-nickname table")
 
 if __name__ == "__main__":
     for i in sys.argv[1:]:
-        if i not in ["pull", "render", "bbcode"]:
+        if i not in ["pull", "render", "update"]:
             showHelp()
             exit()
     for opr in sys.argv[1:]:
@@ -183,13 +193,13 @@ if __name__ == "__main__":
                     pull()
                 elif opr == "render":
                     render()
-                elif opr == "bbcode":
-                    bbcode()
+                elif opr == "update":
+                    update()
             except Exception as e:
                 print("An error occured when tring to", opr, "- total try:", errorTimes + 1)
                 print("Error info:", e)
                 errorTimes += 1
-                if errorTimes == MAX_ERROR_TIME:
+                if errorTimes > MAX_ERROR_TIME:
                     raise e
             else:
                 break
