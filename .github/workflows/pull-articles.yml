@@ -1,10 +1,10 @@
-name: Pull & Sync
+name: Pull Articles
 on:
   schedule:
     - cron: "*/30 * * * *"
 jobs:
   pull:
-    name: Pull & Sync
+    name: Pull
     runs-on: ubuntu-latest
     timeout-minutes: 2
     steps:
@@ -23,15 +23,12 @@ jobs:
       - name: Pull the latest articles
         run: python mcContents.py pull
 
-      - name: Sync with the MCBBS collection
-        run: node sync
-
       - name: Commit the changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "SPGlove"
           git add .
-          git diff-index --quiet HEAD || git commit -m ":arrows_counterclockwise: pull and sync"
+          git diff-index --quiet HEAD || git commit -m ":arrows_counterclockwise: pull articles"
 
       - name: Push changes
         uses: ad-m/github-push-action@master
