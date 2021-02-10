@@ -21,7 +21,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Pull the latest articles
-        run: python mcContents.py pull
+        run: python mcContents.py
 
       - name: Commit the changes
         run: |
