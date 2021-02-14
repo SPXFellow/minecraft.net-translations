@@ -1,6 +1,6 @@
 # MINECRAFT.NET-TRANSLATIONS
 
-![pull & sync](https://github.com/RicoloveFeng/minecraft.net-translations/workflows/Pull%20%26%20Sync/badge.svg)
+![Pull Articles](https://github.com/RicoloveFeng/minecraft.net-translations/workflows/Pull%20Articles/badge.svg)
 
 Minecraft 官方网站博文目录，收录全部分类的官网博文，以及社区投稿的博文译文。
 
@@ -44,8 +44,6 @@ python mcContent.py
 ```
 
 将把表格更新到最新，并输出分类过的表格 `articles.csv`。
-
-现在还会输出一个 `rawtable.csv` 以支持现在依赖本仓库的工具。在将来，这个文件会被移除。
 
 
 
