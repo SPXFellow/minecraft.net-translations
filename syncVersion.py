@@ -7,8 +7,8 @@ import json, sys, os, re
 
 def parseTitle(title):
     snapshot = "[1-2][0-9]w[0-9][0-9][a-z]"
-    pre = "(1\.[1-9][0-9]*\.[0-9]+)-pre([0-9]+)"
-    rc = "(1\.[1-9][0-9]*\.[0-9]+)-rc([0-9]+)"
+    pre = "(1\.[1-9][0-9]*(\.[0-9]+)?)-pre([0-9]+)"
+    rc = "(1\.[1-9][0-9]*(\.[0-9]+)?)-rc([0-9]+)"
     release = "1\.[1-9][0-9]*\.[0-9]+"
     
     res = re.search(snapshot, title)
@@ -18,14 +18,14 @@ def parseTitle(title):
     res = re.search(pre, title)
     if res:
         rel = res.group(1) # 1.2.3
-        ind = res.group(2) # pre4
-        return rel + " Release Candidate " + ind
+        ind = res.group(3) # pre4
+        return rel + " Pre-Release " + ind
     
     res = re.search(rc, title)
     if res:
         rel = res.group(1) # 1.2.3
-        ind = res.group(2) # rc4
-        return rel + " Pre-Release " + ind
+        ind = res.group(3) # rc4
+        return rel + " Release Candidate " + ind
     
     res = re.search(release, title)
     if res:
