@@ -37,13 +37,15 @@ Minecraft 官方网站博文目录，收录全部分类的官网博文，以及�
 
 ### 表格更新
 
-请在命令行中运行`mcContent.py`。
+在 2021 年 7 月 2 日，Minecraft.net 启用了防爬虫机制，导致脚本的自动抓取功能无法正常工作。因此，更新表格需要手动进行。具体方法如下：
 
-```python
-python mcContent.py
-```
+1. 打开`https://www.minecraft.net/content/minecraft-net/_jcr_content.articles.grid?pageSize=50`，将其另存为一个名为`_jcr_content.articles.json`的文件。
 
-将把表格更新到最新，并输出分类过的表格 `articles.csv`。
+2. 在命令行中运行`mcContents.py`，并加入参数以启用本地读取的方式：
+
+   ```
+   python .\mcContents.py local
+   ```
 
 
 

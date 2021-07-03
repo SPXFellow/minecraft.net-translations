@@ -39,13 +39,21 @@ if __name__ == "__main__":
                 break
         return cat
 
-    apiurl = 'https://www.minecraft.net/content/minecraft-net/_jcr_content.articles.grid?pageSize=30'
-    table_name = "articles.csv"
-
-    print("Pulling raw json file from api", apiurl)
-    new_article_list = json.loads(request.urlopen(apiurl).read())['article_grid']
+    # Read raw json
+    args = sys.argv
+    if len(args) == 1:
+        apiurl = 'https://www.minecraft.net/content/minecraft-net/_jcr_content.articles.grid?pageSize=30'
+        print("Pulling raw json file from api", apiurl)
+        new_article_list = json.loads(request.urlopen(apiurl).read())['article_grid']
+        
+    else:
+        localjson = './_jcr_content.articles.json'
+        print("Reading json file", localjson)
+        with open(localjson, 'r', encoding='utf-8') as f:
+            new_article_list = json.load(f)['article_grid']
 
     # Read local table
+    table_name = "articles.csv"
     prev_data = pd.read_csv(table_name, encoding='utf-8')
     last_titles = [prev_data.loc[x]["title"] for x in range(50)]
     new_article_data = pd.DataFrame(columns=prev_data.columns)
