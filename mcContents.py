@@ -55,7 +55,7 @@ if __name__ == "__main__":
     # Read local table
     table_name = "articles.csv"
     prev_data = pd.read_csv(table_name, encoding='utf-8')
-    last_titles = [prev_data.loc[x]["title"] for x in range(50)]
+    last_titles = [prev_data.loc[x]["title"] for x in range(150)]
     new_article_data = pd.DataFrame(columns=prev_data.columns)
 
     for art in new_article_list:
