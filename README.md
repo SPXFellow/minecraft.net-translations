@@ -31,7 +31,11 @@ Minecraft 官方网站博文目录，收录全部分类的官网博文，以及�
 
 ### 表格更新
 
-在 2021 年 7 月 2 日，Minecraft.net 启用了防爬虫机制，导致脚本的自动抓取功能无法正常工作。因此，更新表格需要手动进行。具体方法如下：
+在 2021 年 7 月 2 日，Minecraft.net 启用了防爬虫机制，导致脚本的自动抓取功能无法正常工作。
+
+而自 2021 年 8 月 28 日起，本仓库通过外部支持重新恢复了自动抓取功能。
+
+若您希望手动更新表格，请参照如下方法：
 
 1. 打开`https://www.minecraft.net/content/minecraft-net/_jcr_content.articles.grid?pageSize=100`，将其另存为一个名为`_jcr_content.articles.json`的文件。
 

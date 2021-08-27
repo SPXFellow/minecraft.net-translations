@@ -67,7 +67,7 @@ def sync_version():
         Sync Minecraft version posts
     '''
     # There are about 28 threads per page, so don't leave the table too long. (> 6 months)
-    news_url = "https://www.mcbbs.net/forum.php?mod=forumdisplay&fid=139&filter=typeid&typeid=204"
+    news_url = 'https://www.mcbbs.net/forum.php?mod=forumdisplay&fid=139&filter=typeid&typeid=204'
     
     soup = BeautifulSoup(request.urlopen(news_url).read(),"html.parser")
     newslist = []
