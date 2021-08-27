@@ -4,6 +4,7 @@ from dateutil import parser
 import json
 import sys, os
 from bs4 import BeautifulSoup
+from pandas.core import api
 
 if __name__ == "__main__":
     # Used in addSeries()
@@ -43,8 +44,10 @@ if __name__ == "__main__":
     args = sys.argv
     if len(args) == 1 or (len(args) == 2 and args[1] == 'api'):
         apiurl = os.environ['DLL_API']
+        headers = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36'}
         print("Pulling raw json file from api", apiurl)
-        new_article_list = json.loads(request.urlopen(apiurl).read())['article_grid']
+        req = request.Request(url = apiurl, headers=headers)
+        new_article_list = json.loads(request.urlopen(req).read())['article_grid']
         
     else:
         localjson = './_jcr_content.articles.json'
