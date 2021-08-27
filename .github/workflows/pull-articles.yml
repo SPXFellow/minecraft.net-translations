@@ -21,7 +21,9 @@ jobs:
           pip install -r requirements.txt
 
       - name: Pull the latest articles
-        run: python mcContents.py
+        env:
+          DLL_API: ${{ secrets.DLL_API }}
+        run: python mcContents.py api
 
       - name: Commit the changes
         run: |

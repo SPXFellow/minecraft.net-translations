@@ -41,8 +41,8 @@ if __name__ == "__main__":
 
     # Read raw json
     args = sys.argv
-    if len(args) == 1:
-        apiurl = 'https://www.minecraft.net/content/minecraft-net/_jcr_content.articles.grid?pageSize=30'
+    if len(args) == 1 or (len(args) == 2 and args[1] == 'api'):
+        apiurl = os.environ['DLL_API']
         print("Pulling raw json file from api", apiurl)
         new_article_list = json.loads(request.urlopen(apiurl).read())['article_grid']
         
