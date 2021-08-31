@@ -31,19 +31,27 @@ Minecraft 官方网站博文目录，收录全部分类的官网博文，以及�
 
 ### 表格更新
 
-在 2021 年 7 月 2 日，Minecraft.net 启用了防爬虫机制，导致脚本的自动抓取功能无法正常工作。
-
-而自 2021 年 8 月 28 日起，本仓库通过外部支持重新恢复了自动抓取功能。
+在 2021 年 7 月 2 日，Minecraft.net 启用了防爬虫机制，直接爬取博文列表会失败。自 2021 年 8 月 28 日起，本仓库通过外部支持重新恢复了自动抓取功能。
 
 若您希望手动更新表格，请参照如下方法：
+
+#### 手动更新
 
 1. 打开`https://www.minecraft.net/content/minecraft-net/_jcr_content.articles.grid?pageSize=100`，将其另存为一个名为`_jcr_content.articles.json`的文件。
 
 2. 在命令行中运行`mcContents.py`，并加入参数以启用本地读取的方式：
 
    ```
-   python .\mcContents.py local
+   python ./mcContents.py local
    ```
+
+#### 使用自己搭建的 API 网址
+
+与手动更新类似，但是需要将 `local` 改为您的 API 网址：
+
+```
+python ./mcContents.py https://www.example.com/?src=content/minecraft-net/_jcr_content.articles.grid?pageSize=100
+```
 
 
 
@@ -52,14 +60,16 @@ Minecraft 官方网站博文目录，收录全部分类的官网博文，以及�
 `sync.py` 提供了与 MCBBS 新闻版与翻译版同步的功能。惟请注意：
 
 * 只能同步 Java 版本更新资讯，且必须采用版规规定的格式，以解析该帖子所对应的版本。
-* 只会同步翻译版博文中按时间排序的前两页，且只记录拥有宝石评分的帖子。更遥远的帖子因锁帖机制而不考虑在内。
+* <s>只会同步翻译版博文中按时间排序的前两页，且只记录拥有宝石评分的帖子。更遥远的帖子因锁帖机制而不考虑在内。</s>
 * 只会将使用了 SPX 标准格式的帖子记入表格。未采用 SPX 格式的帖子需要手动查看日志进行添加。
 
-若想要开始同步，请直接运行脚本：
+<s>若想要开始同步，请直接运行脚本：</s>
 
 ```
 python .\sync.py
 ```
+
+此脚本正在维护中，不建议直接使用。
 
 
 
@@ -84,6 +94,10 @@ python .\sync.py
 
 ## 更新记录
 
+* 2021-08-31 v3.4
+  * 稍微修改了 mcContents.py 的参数设置。
+  * 美化了 mcContents.py 的代码结构，使其具备更高的可读性。
+  * 修复了依然会收录 education.minecraft.com 的漏洞。
 * 2021-08-18 v3.3
   * 扩充了 syncVersion.py 的功能，现在可以同步翻译版的已获得宝石评分的博文。
   * 将 syncVersion.py 重命名为 sync.py
