@@ -6,7 +6,7 @@ Minecraft 官方网站博文目录，收录全部分类的官网博文，以及�
 
 本目录所收藏的博文翻译来自社区。如果你对自己翻译的质量有信心，欢迎向本仓库投稿。
 
-推荐的博文目录浏览器：https://spx.spgoding.com
+推荐的博文目录浏览器：https://ricolovefeng.github.io
 
 
 
