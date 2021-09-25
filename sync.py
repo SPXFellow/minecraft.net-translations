@@ -177,7 +177,7 @@ if __name__ == "__main__":
                 
         if newsind == len(newslist):
             break
-
+'''
     # load minecraft.net translations
     greens, failed = sync_emerald()
 
@@ -199,6 +199,6 @@ if __name__ == "__main__":
         for item in failed:
             f.write(item["tid"]+"\n")
     print("\nThere are", len(fail_log), " threads that failed to process. See tids in", fail_log)
-
+'''
     # save table
     table.to_csv(path_or_buf=table_name, index=False, encoding='utf-8')
