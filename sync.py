@@ -12,7 +12,7 @@ site = "https://www.mcbbs.net/thread-{}-1-1.html"
 
 ###### Utils ######
 
-def parseTitle(title):
+def parseJavaTitle(title):
     snapshot = "[1-2][0-9]w[0-9][0-9][a-z]"
     pre = "(1\.[1-9][0-9]*(\.[0-9]+)?)-pre([0-9]+)"
     rc = "(1\.[1-9][0-9]*(\.[0-9]+)?)-rc([0-9]+)"
@@ -40,6 +40,16 @@ def parseTitle(title):
     
     return title
 
+def parseBETitle(title):
+    beta = "Beta (1\.[1-9][0-9]*\.[0-9]+\.[0-9]+)"
+    release = "" # not sure yet
+
+    res = re.search(beta, title)
+    if res:
+        return res.group(0)
+
+    return title
+
 def uidGet(link:str):
     '''
         获取指定链接的发帖者 uid。
@@ -62,27 +72,61 @@ def nameGet(uid):
 
 ###### sync functions ######
 
-def sync_version():
-    '''
-        Sync Minecraft version posts
-    '''
-    # There are about 28 threads per page, so don't leave the table too long. (> 6 months)
-    news_url = 'https://www.mcbbs.net/forum.php?mod=forumdisplay&fid=139&filter=typeid&typeid=204'
-    
-    soup = BeautifulSoup(request.urlopen(news_url).read(),"html.parser")
+def make_newslist(url, parser):
+    soup = BeautifulSoup(request.urlopen(url).read(),"html.parser")
     newslist = []
     for t in soup.find_all("tbody"):
         tr = t.tr
         xst = tr.th.find("a", class_="xst")
         by = tr.find("td", class_="by")
         if xst:
-            version = parseTitle(xst.text)
+            version = parser(xst.text)
             link = site.format(t.attrs["id"][13:])
             name = by.cite.a.text if by.cite.a else "匿名"
             item = (version, link, name)
             if item not in newslist:
                 newslist.append(item)
     return newslist
+
+def sync_version():
+    '''
+        Sync Minecraft version posts
+    '''
+    # There are about 28 threads per page, so don't leave the table too long. (> 6 months)
+    java_url = 'https://www.mcbbs.net/forum.php?mod=forumdisplay&fid=139&filter=typeid&typeid=204'
+    be_url = 'https://www.mcbbs.net/forum.php?mod=forumdisplay&fid=139&filter=typeid&typeid=2400'
+    newslist = make_newslist(java_url, parseJavaTitle) + make_newslist(be_url, parseBETitle)
+    return newslist
+
+###### Merge synced information ######
+
+if __name__ == "__main__":
+    table_name = "articles.csv"
+    table = pd.read_csv(table_name, encoding='utf-8')
+    
+    # load news
+    newslist = sync_version()
+
+    # update version posts
+    newsind = 0
+    for i in range(50):
+        entry = table.loc[i]
+        if "version" in entry["cat"].split(":") or "be" in entry["cat"].split(":") and entry["tr_link"] == "-":
+            for newsitem in newslist[newsind:]:
+                if newsitem[0] in entry["title"]:
+                    entry["tr_link"] = newsitem[1]
+                    entry["tr_name"] = newsitem[2]
+                    newsind += 1
+                    print(newsitem[0] ,"is synced.")
+                    break
+                
+        if newsind == len(newslist):
+            break
+
+    # save table
+    table.to_csv(path_or_buf=table_name, index=False, encoding='utf-8')
+
+###### Unused code ######
 
 def sync_emerald():
     '''
@@ -153,31 +197,8 @@ def sync_emerald():
 
     return greens, failed
 
-###### Merge synced information ######
-
-if __name__ == "__main__":
-    table_name = "articles.csv"
-    table = pd.read_csv(table_name, encoding='utf-8')
-    
-    # load news
-    newslist = sync_version()
-
-    # update version posts
-    newsind = 0
-    for i in range(50):
-        entry = table.loc[i]
-        if "version" in entry["cat"].split(":") and entry["tr_link"] == "-":
-            for newsitem in newslist[newsind:]:
-                if newsitem[0] in entry["title"]:
-                    entry["tr_link"] = newsitem[1]
-                    entry["tr_name"] = newsitem[2]
-                    newsind += 1
-                    print(newsitem[0] ,"is synced.")
-                    break
-                
-        if newsind == len(newslist):
-            break
-'''
+def trash():
+    '''
     # load minecraft.net translations
     greens, failed = sync_emerald()
 
@@ -199,6 +220,5 @@ if __name__ == "__main__":
         for item in failed:
             f.write(item["tid"]+"\n")
     print("\nThere are", len(fail_log), " threads that failed to process. See tids in", fail_log)
-'''
-    # save table
-    table.to_csv(path_or_buf=table_name, index=False, encoding='utf-8')
+    '''
+    pass
