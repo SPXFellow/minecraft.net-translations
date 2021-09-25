@@ -25,7 +25,8 @@ def attach_column(cat, title):
         "minecraft java edition": "version",
         "pre-release": "version",
         "release candidate": "version",
-        "minecraft beta": "be"
+        "minecraft beta": "be",
+        "BI-MONTHLY BUILD CHALLENGE": "bmbc"
     }
     cat = cat.lower()
     title = title.lower()
