@@ -100,6 +100,13 @@ def pull_article_list():
             raw_json = json.loads(request.urlopen(req).read())
     return raw_json['article_grid']
 
+def before_deadline(pub):
+    '''
+        Reject articles published before 2021.
+        We used to reject articles under NEWS catagory, so if they pop up, we still reject them.
+    '''
+    return parser.parse(pub).year < 2021
+
 if __name__ == "__main__":
     # Used in attach_column()  
     new_article_list = pull_article_list()
@@ -107,14 +114,14 @@ if __name__ == "__main__":
     # Read local table
     table_name = "articles.csv"
     prev_data = pd.read_csv(table_name, encoding='utf-8')
-    prev_latest_titles = [prev_data.loc[x]["title"] for x in range(150)]
+    prev_latest_titles = [prev_data.loc[x]["title"] for x in range(len(prev_data))]
 
     new_article_data = pd.DataFrame(columns=prev_data.columns)
 
     for entry in new_article_list:
         if tagChecked(entry):
             pub, title, link, cat = parse_entry(entry)
-            if title in prev_latest_titles or title == 'edu':
+            if title in prev_latest_titles or title == 'edu' or before_deadline(pub):
                 continue
             print("Adding new article:", title)
             new_article_data.loc[len(new_article_data)]=[pub, title, link, cat,'-', '-'] # tr_link, tr_name
