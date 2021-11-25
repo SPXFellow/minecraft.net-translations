@@ -26,7 +26,7 @@ def attach_column(cat, title):
         "pre-release": "version",
         "release candidate": "version",
         "minecraft beta": "be",
-        "bi-monthly build challenge": "bmbc"
+        "build challenge": "bc"
     }
     cat = cat.lower()
     title = title.lower()
