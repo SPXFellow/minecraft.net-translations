@@ -96,7 +96,11 @@ def pull_article_list():
                 apiurl = os.environ['DLL_API']
             headers = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36'}
             print("Pulling raw json file from api", apiurl)
-            req = request.Request(url = apiurl, headers=headers)
+            try:
+                req = request.Request(url = apiurl, headers=headers)
+            except urllib.error.HTTPError as e:
+                print("Request Failed:", e)
+                exit()
             raw_json = json.loads(request.urlopen(req).read())
     return raw_json['article_grid']
 
