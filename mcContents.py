@@ -1,5 +1,5 @@
 import pandas as pd
-from urllib import request
+from urllib import request, error
 from dateutil import parser
 import json
 import sys, os
@@ -99,7 +99,7 @@ def pull_article_list():
             try:
                 req = request.Request(url = apiurl, headers=headers)
                 raw_json = json.loads(request.urlopen(req).read())
-            except urllib.error.HTTPError as e:
+            except error.HTTPError as e:
                 print("Request Failed:", e)
                 exit()
             
