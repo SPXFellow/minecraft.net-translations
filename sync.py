@@ -111,7 +111,7 @@ if __name__ == "__main__":
     newsind = 0
     for i in range(50):
         entry = table.loc[i]
-        if "version" in entry["cat"].split(":") or "be" in entry["cat"].split(":") and entry["tr_link"] == "-":
+        if entry["cat"] and ("version" in entry["cat"].split(":") or "be" in entry["cat"].split(":")) and entry["tr_link"] == "-":
             for newsitem in newslist[newsind:]:
                 if newsitem[0] in entry["title"]:
                     entry["tr_link"] = newsitem[1]
