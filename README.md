@@ -21,7 +21,7 @@ Minecraft 官方网站博文目录，收录全部分类的官网博文，以及�
 ## 文件结构
 
 * `articles.csv`：存放所有博文及翻译。
-* `mcContent.py`：运行这个脚本后，会将官网上的新博文同步到上述表格中。
+* `mc_content.py`：运行这个脚本后，会将官网上的新博文同步到上述表格中。
 * `cat.json`：分类名称对照表。
 * `archive/`：MCBBS 译文归档。
 
@@ -57,15 +57,17 @@ python ./mcContents.py https://www.example.com/?src=content/minecraft-net/_jcr_c
 
 ### 与 MCBBS 同步
 
-`sync.py` 提供了与 MCBBS 新闻版同步的功能。惟请注意：
+`version_sync.py` 提供了与 MCBBS 新闻版同步的功能。惟请注意：
 
 * 只能同步 Java 版本更新资讯/部分基岩 Beta 版更新资讯，且必须采用版规规定的标题格式，以解析该帖子所对应的版本。
-* 翻译版是什么贵物？以后再说吧。
+
+`post_sync.py` 提供了与 MCBBS 官方博文录同步的功能。
 
 若想要开始同步，请直接运行脚本：
 
 ```
-python .\sync.py
+python .\version_sync.py
+python .\post_sync.py
 ```
 
 
@@ -93,6 +95,9 @@ python .\sync.py
 
 ## 更新记录
 
+* 2022-02-27 v3.8
+  * 修改了部分文件名称。
+  * 加入了对官方博文录的同步功能。
 * 2021-11-25 v3.7
   * 因半月建筑挑战改名，现在将半月建筑挑战的分类从 `bmbc` 改为 `bc`。
 * 2021-11-02 v3.6

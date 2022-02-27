@@ -25,7 +25,7 @@ jobs:
       - name: Pull the latest articles
         env:
           DLL_API: ${{ secrets.DLL_API }}
-        run: python mcContents.py api
+        run: python mc_contents.py api
 
       - name: Commit the changes
         run: |
