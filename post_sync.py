@@ -28,6 +28,7 @@ for i in range(len(table)):
     if link in sync_list and tr_link == "-":
         entry["tr_link"] = sync_list[link][0]
         entry["tr_name"] = sync_list[link][1]
+        print("Sync", entry["title"], "by", entry["tr_name"])
 
 table.to_csv(path_or_buf=table_name, index=False, encoding='utf-8')
 
