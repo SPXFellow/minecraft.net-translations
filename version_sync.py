@@ -42,7 +42,7 @@ def parseJavaTitle(title):
 
 def parseBETitle(title):
     beta = "Beta (1\.[1-9][0-9]*\.[0-9]+\.[0-9]+)"
-    preview = "Preview (1\.[1-9][0-9]*\.[0-9]+\.[0-9]+)"
+    preview = "(1\.[1-9][0-9]*\.[0-9]+\.[0-9]+/[0-9]+)"
     release = "" # not sure yet
 
     res = re.search(beta, title)
@@ -51,7 +51,7 @@ def parseBETitle(title):
 
     res = re.search(preview, title)
     if res:
-        return "Preview - " + res.group(1)
+        return res.group(0)
 
     return title
 
@@ -101,8 +101,6 @@ def sync_version():
     java_url = 'https://www.mcbbs.net/forum.php?mod=forumdisplay&fid=139&filter=typeid&typeid=204'
     be_url = 'https://www.mcbbs.net/forum.php?mod=forumdisplay&fid=139&filter=typeid&typeid=2400'
     newslist = make_newslist(java_url, parseJavaTitle) + make_newslist(be_url, parseBETitle)
-    for i in newslist:
-        print(i)
     return newslist
 
 ###### Merge synced information ######
