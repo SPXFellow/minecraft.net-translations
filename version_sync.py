@@ -13,6 +13,9 @@ site = "https://www.mcbbs.net/thread-{}-1-1.html"
 ###### Utils ######
 
 def parseJavaTitle(title):
+    '''
+        Parse title in mcbbs to title in Minecraft.
+    '''
     snapshot = "[1-2][0-9]w[0-9][0-9][a-z]"
     pre = "(1\.[1-9][0-9]*(\.[0-9]+)?)-pre([0-9]+)"
     rc = "(1\.[1-9][0-9]*(\.[0-9]+)?)-rc([0-9]+)"
@@ -43,6 +46,7 @@ def parseJavaTitle(title):
 def parseBETitle(title):
     beta = "Beta (1\.[1-9][0-9]*\.[0-9]+\.[0-9]+)"
     preview = "(1\.[1-9][0-9]*\.[0-9]+\.[0-9]+/[0-9]+)"
+    preview2 = "Beta & Preview (1\.[1-9][0-9]*\.[0-9]+\.[0-9]+)"
     release = "" # not sure yet
 
     res = re.search(beta, title)
@@ -50,6 +54,10 @@ def parseBETitle(title):
         return res.group(0)
 
     res = re.search(preview, title)
+    if res:
+        return res.group(0)
+
+    res = re.search(preview2, title)
     if res:
         return res.group(0)
 
