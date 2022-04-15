@@ -1,5 +1,6 @@
+from hashlib import new
 import pandas as pd
-from urllib import request, error
+import requests
 from dateutil import parser
 import json
 import sys, os
@@ -92,16 +93,15 @@ def pull_article_list():
         else:
             # Read from url 
             if apiurl == 'api':
-                # Using Dianliang's API. This only works on Github.
-                apiurl = os.environ['DLL_API']
+                apiurl = "https://www.minecraft.net/content/minecraft-net/_jcr_content.articles.grid?pageSize=100"
             headers = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36'}
             print("Pulling raw json file from api", apiurl)
             try:
-                req = request.Request(url = apiurl, headers=headers)
-                raw_json = json.loads(request.urlopen(req).read())
-            except error.HTTPError as e:
+                req = requests.get(url = apiurl, headers=headers)
+                raw_json = req.json()
+            except Exception as e:
                 print("Request Failed:", e)
-                exit()
+                exit(1)
             
     return raw_json['article_grid']
 
@@ -115,6 +115,7 @@ def before_deadline(pub):
 if __name__ == "__main__":
     # Used in attach_column()  
     new_article_list = pull_article_list()
+    print(new_article_list)
 
     # Read local table
     table_name = "articles.csv"

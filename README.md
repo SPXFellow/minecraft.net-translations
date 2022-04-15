@@ -31,23 +31,31 @@ Minecraft 官方网站博文目录，收录全部分类的官网博文，以及�
 
 ### 表格更新
 
-在 2021 年 7 月 2 日，Minecraft.net 启用了防爬虫机制，直接爬取博文列表会失败。自 2021 年 8 月 28 日起，本仓库通过外部支持重新恢复了自动抓取功能。
+在 v3.9 中已经恢复了直接爬取官网信息的功能。
 
-若您希望手动更新表格，请参照如下方法：
+#### 直接从官网获取数据
+
+按以下格式在命令行运行 `mc_contents.py`，即可更新表格。
+
+```
+python ./mc_contents.py api
+```
 
 #### 手动更新
 
+若您希望手动更新表格，请参照如下方法：
+
 1. 打开`https://www.minecraft.net/content/minecraft-net/_jcr_content.articles.grid?pageSize=100`，将其另存为一个名为`_jcr_content.articles.json`的文件。
 
-2. 在命令行中运行`mcContents.py`，并加入参数以启用本地读取的方式：
+2. 在命令行中运行`mc_contents.py`，并加入参数以启用本地读取的方式：
 
    ```
-   python ./mcContents.py local
+   python ./mc_contents.py local
    ```
 
 #### 使用自己搭建的 API 网址
 
-与手动更新类似，但是需要将 `local` 改为您的 API 网址：
+这个方法适用于无法直接从官网抓取时，希望通过自建 API 来自动更新的情形。与直接获取类似，但是需要将 `api` 改为您的 API 网址：
 
 ```
 python ./mcContents.py https://www.example.com/?src=content/minecraft-net/_jcr_content.articles.grid?pageSize=100
@@ -72,8 +80,6 @@ python .\post_sync.py
 
 
 
-
-
 ### 表格字段说明
 
 * published - 发表日期
@@ -95,6 +101,8 @@ python .\post_sync.py
 
 ## 更新记录
 
+* 2022-04-15 v3.9
+  * 更换请求库为 `requests`，经测试，使用 header 后不再需要依赖外部 API 了。
 * 2022-02-27 v3.8
   * 修改了部分文件名称。
   * 加入了对官方博文录的同步功能。
