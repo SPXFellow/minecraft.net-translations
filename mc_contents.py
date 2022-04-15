@@ -115,7 +115,6 @@ def before_deadline(pub):
 if __name__ == "__main__":
     # Used in attach_column()  
     new_article_list = pull_article_list()
-    print(new_article_list)
 
     # Read local table
     table_name = "articles.csv"
