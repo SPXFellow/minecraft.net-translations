@@ -16,14 +16,16 @@ def tagChecked(art):
 
 def attach_column(cat, title):
     '''
-        Auto label articles.
+        Auto-labeling articles.
     '''
     patterns = {
         "block of the week": "botw",
+        "block of the month": "botw",
         "taking inventory": "ti",
         "around the block": "atb",
         "minecraft snapshot": "version",
         "minecraft java edition": "version",
+        "minecraft: java edition": "version",
         "pre-release": "version",
         "release candidate": "version",
         "minecraft beta": "be",
@@ -35,7 +37,11 @@ def attach_column(cat, title):
         if p in title:
             cat += ":"+patterns[p]
             #print("[attach_column]", title, "->", cat)
-            break
+            return cat
+    # special pattern for be
+    if "1." in title and "bedrock" in title:
+        return cat + ":be"
+    # default
     return cat
 
 def parse_entry(art):
@@ -126,7 +132,7 @@ if __name__ == "__main__":
     for entry in new_article_list:
         if tagChecked(entry):
             pub, title, link, cat = parse_entry(entry)
-            if title in prev_latest_titles or title == 'edu' or before_deadline(pub):
+            if title in prev_latest_titles or title == 'edu' or before_deadline(pub) or title == "Minecraft":
                 continue
             print("Adding new article:", title)
             new_article_data.loc[len(new_article_data)]=[pub, title, link, cat,'-', '-'] # tr_link, tr_name
@@ -136,5 +142,21 @@ if __name__ == "__main__":
         print("Successfully pulled.")
     else:
         print("Already up-to-date.")
+
+    #tmp func
+    # for i in range(200):
+    #     try:
+    #         entry = prev_data.loc[i]
+    #         cat, title = entry["cat"], entry["title"]
+    #         if ":" not in cat:
+    #             new_cat = attach_column(cat, title)
+    #             if new_cat != cat:
+    #                 prev_data.loc[i]["cat"] = new_cat
+    #                 print(title,"cat:", cat, "->", new_cat)
+    #     except:
+    #         print(i)
+    #     pd.concat([new_article_data,prev_data]).to_csv(path_or_buf=table_name, index=False, encoding='utf-8')
+
+
 
 

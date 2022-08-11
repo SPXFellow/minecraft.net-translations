@@ -15,11 +15,12 @@ site = "https://www.mcbbs.net/thread-{}-1-1.html"
 def parseJavaTitle(title):
     '''
         Parse title in mcbbs to title in Minecraft.
+        Specifically, return the corresponding minecraft post title of the original mcbbs post title
     '''
     snapshot = "[1-2][0-9]w[0-9][0-9][a-z]"
     pre = "(1\.[1-9][0-9]*(\.[0-9]+)?)-pre([0-9]+)"
     rc = "(1\.[1-9][0-9]*(\.[0-9]+)?)-rc([0-9]+)"
-    release = "1\.[1-9][0-9]*\.[0-9]+"
+    release = "Java版 (1\.[1-9][0-9]*\.[0-9]+)"
     
     res = re.search(snapshot, title)
     if res:
@@ -39,7 +40,8 @@ def parseJavaTitle(title):
     
     res = re.search(release, title)
     if res:
-        return res.group(0)
+        rel = res.group(1) # 1.2.3
+        return "Java Edition " + res.group(1)
     
     return title
 
@@ -47,7 +49,7 @@ def parseBETitle(title):
     beta = "Beta (1\.[1-9][0-9]*\.[0-9]+\.[0-9]+)"
     preview = "(1\.[1-9][0-9]*\.[0-9]+\.[0-9]+/[0-9]+)"
     preview2 = "Beta & Preview (1\.[1-9][0-9]*\.[0-9]+\.[0-9]+)"
-    release = "" # not sure yet
+    release = "基岩版 (1\.[1-9][0-9]*\.[0-9]+)" # not sure yet
 
     res = re.search(beta, title)
     if res:
@@ -60,6 +62,10 @@ def parseBETitle(title):
     res = re.search(preview2, title)
     if res:
         return res.group(0)
+
+    res = re.search(release, title)
+    if res:
+        return res.group(1) # 1.2.3
 
     return title
 
@@ -108,8 +114,9 @@ def sync_version():
     # There are about 28 threads per page, so don't leave the table too long. (> 6 months)
     java_url = 'https://www.mcbbs.net/forum.php?mod=forumdisplay&fid=139&filter=typeid&typeid=204'
     be_url = 'https://www.mcbbs.net/forum.php?mod=forumdisplay&fid=139&filter=typeid&typeid=2400'
-    newslist = make_newslist(java_url, parseJavaTitle) + make_newslist(be_url, parseBETitle)
-    return newslist
+    je_news_list = make_newslist(java_url, parseJavaTitle)
+    be_news_list = make_newslist(be_url, parseBETitle)
+    return je_news_list, be_news_list
 
 ###### Merge synced information ######
 
@@ -118,14 +125,18 @@ if __name__ == "__main__":
     table = pd.read_csv(table_name, encoding='utf-8')
     
     # load news
-    newslist = sync_version()
+    je, be = sync_version()
 
     # update version posts
     newsind = 0
-    for i in range(50):
+    for i in range(200):
         entry = table.loc[i]
         if type(entry["cat"]) is str and ("version" in entry["cat"].split(":") or "be" in entry["cat"].split(":")) and entry["tr_link"] == "-":
-            for newsitem in newslist[newsind:]:
+            if "version" in entry["cat"].split(":"):
+                newslist = je
+            else:
+                newslist = be
+            for newsitem in newslist:
                 if newsitem[0] in entry["title"]:
                     entry["tr_link"] = newsitem[1]
                     entry["tr_name"] = newsitem[2]
@@ -133,7 +144,7 @@ if __name__ == "__main__":
                     print(newsitem[0] ,"is synced.")
                     break
                 
-        if newsind == len(newslist):
+        if newsind == len(je) + len(be):
             break
 
     # save table
