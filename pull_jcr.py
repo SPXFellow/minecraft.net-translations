@@ -11,7 +11,6 @@ def tagChecked(art):
         This function asserts that these tags exist. 
     '''
     return ("default_tile" in art
-            and "publish_date" in art
             and  "primary_category" in art)
 
 def attach_column(cat, title):
@@ -29,6 +28,7 @@ def attach_column(cat, title):
         "pre-release": "version",
         "release candidate": "version",
         "minecraft beta": "be",
+        "minecraft preview": "be",
         "build challenge": "bc"
     }
     cat = cat.lower()
@@ -54,7 +54,6 @@ def parse_entry(art):
                 },
                 "primary_category": "News",
                 "article_url": "/en-us/article/new-java-realms-keepin-up-with-the-pillagers",
-                "publish_date": "30 August 2021 09:24:19 UTC",
                 ... something we don't care
             }
         
@@ -71,11 +70,10 @@ def parse_entry(art):
     else:
         link = 'https://www.minecraft.net' + art["article_url"]
     # Publish date
-    pub = parser.parse(art["publish_date"]).replace(tzinfo=None)
-    pub = str(pub.year) + "/" + str(pub.month) + "/" + str(pub.day)
+    pub = '-'
     return pub, title, link, cat
 
-def pull_article_list():
+def pull_article_list(latest_title: str) -> list:
     '''
         Read raw json from Minecraft.net, and return article list.
         {
@@ -84,55 +82,51 @@ def pull_article_list():
                 "default_tile": {
                 ...        
     '''
-    args = sys.argv
-    if len(args) == 1:
-        print("API url is required!")
-        exit()
-    elif len(args) == 2 :
-        apiurl = args[1]
-        if args[1] == 'local':
-            # Read from local file
-            localjson = './_jcr_content.articles.json'
-            print("Reading json file", localjson)
-            with open(localjson, 'r', encoding='utf-8') as f:
-                raw_json = json.load(f)
-        else:
-            # Read from url 
-            if apiurl == 'api':
-                apiurl = "https://www.minecraft.net/content/minecraft-net/_jcr_content.articles.grid?pageSize=100"
-            headers = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36'}
-            print("Pulling raw json file from api", apiurl)
-            try:
-                req = requests.get(url = apiurl, headers=headers)
-                raw_json = req.json()
-            except Exception as e:
-                print("Request Failed:", e)
-                exit(1)
+    apiurl = "https://www.minecraft.net/content/minecraftnet/language-masters/en-us/_jcr_content.articles.page-{}.json"
+    headers = {'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36'}
+    
+    print("Pulling raw json file from api", apiurl)
+    new_article_list = []
+    for page in range(1, 100):
+        current_url = apiurl.format(page)
+        try:
+            response = requests.get(current_url, headers=headers, timeout=5)
+            response.raise_for_status()
             
-    return raw_json['article_grid']
+            data = response.json()
+            curr_list = data['article_grid']
+            for article in curr_list:
+                if article['default_tile']['title'] == latest_title:
+                    print(f"✅ Page {page} saved and job done.")
+                    return new_article_list
+                else:
+                    new_article_list.append(article)
+                        
+            print(f"✅ Page {page} saved.")
 
-def before_deadline(pub):
-    '''
-        Reject articles published before 2021.
-        We used to reject articles under NEWS catagory, so if they pop up, we still reject them.
-    '''
-    return parser.parse(pub).year < 2021
+        except Exception as e:
+            print(f"❌ Failed to save page {page}: {e}")
+            exit()
+
+    # Reverse the list since it's appeneded in reverse order.
+    return new_article_list[::-1]
+
 
 if __name__ == "__main__":
-    # Used in attach_column()  
-    new_article_list = pull_article_list()
-
-    # Read local table
+    # Check local latest title
     table_name = "articles.csv"
     prev_data = pd.read_csv(table_name, encoding='utf-8')
     prev_latest_titles = [prev_data.loc[x]["title"] for x in range(len(prev_data))]
+
+    # Used in attach_column()  
+    new_article_list = pull_article_list(prev_latest_titles[0])
 
     new_article_data = pd.DataFrame(columns=prev_data.columns)
 
     for entry in new_article_list:
         if tagChecked(entry):
             pub, title, link, cat = parse_entry(entry)
-            if title in prev_latest_titles or title == 'edu' or before_deadline(pub) or title == "Minecraft":
+            if title == 'edu' or title == "Minecraft":
                 continue
             print("Adding new article:", title)
             new_article_data.loc[len(new_article_data)]=[pub, title, link, cat,'-', '-'] # tr_link, tr_name

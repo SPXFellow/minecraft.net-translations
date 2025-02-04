@@ -12,7 +12,7 @@ Minecraft 官方网站博文目录，收录全部分类的官网博文，以及�
 
 ## 投稿须知
 
-* 自 2021 年 7 月 7 日起，本仓库重新收录 MCBBS 的博文。
+* 本仓库收录任何来源的译文，包括但不限于KLPBBS, MCZWLT, MCBBS纪念版
 * 如果希望投稿，请在本仓库发起 issue 或 pull request.
 * 如果您认为您的译文质量高于某译文，可以选择提出 issue 来申请替换。
 
@@ -21,7 +21,7 @@ Minecraft 官方网站博文目录，收录全部分类的官网博文，以及�
 ## 文件结构
 
 * `articles.csv`：存放所有博文及翻译。
-* `mc_content.py`：运行这个脚本后，会将官网上的新博文同步到上述表格中。
+* `pull_jcr.py`：运行这个脚本后，会将官网上的新博文同步到上述表格中。
 * `cat.json`：分类名称对照表。
 * `archive/`：MCBBS 译文归档。
 
@@ -35,49 +35,11 @@ Minecraft 官方网站博文目录，收录全部分类的官网博文，以及�
 
 #### 直接从官网获取数据
 
-按以下格式在命令行运行 `mc_contents.py`，即可更新表格。
+按以下格式在命令行运行 `pull_jcr.py`，即可更新表格。
 
 ```
-python ./mc_contents.py api
+python ./pull_jcr.py 
 ```
-
-#### 手动更新
-
-若您希望手动更新表格，请参照如下方法：
-
-1. 打开`https://www.minecraft.net/content/minecraft-net/_jcr_content.articles.grid?pageSize=100`，将其另存为一个名为`_jcr_content.articles.json`的文件。
-
-2. 在命令行中运行`mc_contents.py`，并加入参数以启用本地读取的方式：
-
-   ```
-   python ./mc_contents.py local
-   ```
-
-#### 使用自己搭建的 API 网址
-
-这个方法适用于无法直接从官网抓取时，希望通过自建 API 来自动更新的情形。与直接获取类似，但是需要将 `api` 改为您的 API 网址：
-
-```
-python ./mcContents.py https://www.example.com/?src=content/minecraft-net/_jcr_content.articles.grid?pageSize=100
-```
-
-
-
-### 与 MCBBS 同步
-
-`version_sync.py` 提供了与 MCBBS 新闻版同步的功能。惟请注意：
-
-* 只能同步 Java 版本更新资讯/部分基岩 Beta 版更新资讯，且必须采用版规规定的标题格式，以解析该帖子所对应的版本。
-
-`post_sync.py` 提供了与 MCBBS 官方博文录同步的功能。
-
-若想要开始同步，请直接运行脚本：
-
-```
-python .\version_sync.py
-python .\post_sync.py
-```
-
 
 
 ### 表格字段说明
@@ -101,6 +63,9 @@ python .\post_sync.py
 
 ## 更新记录
 
+* 2025-02-04 v4.0
+  * 针对新的 API 重构了请求脚本，现在自动抓取不会添加日期了。
+  * 暂时移除了对 MCBBS 的支持。
 * 2022-08-12 v3.10
   * 针对近期 Mojang 标题格式混乱的问题，提升了脚本的健壮性。
     * 增加了更多标题的分类标签解析
